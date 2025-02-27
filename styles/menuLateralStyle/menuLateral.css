@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.menuLateral {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20%;
+  background-color: #057BCF;
+  height: 100vh;
+  transform: translateX(100%); /* Começa fora da tela */
+  transition: transform 0.5s ease-in-out;
+}
+
+.menuLateral.aberto {
+  transform: translateX(0); /* Move para a tela ao abrir */
+}
+
+.fecharMenu {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 40px;
+}
+
+.topicosMenu {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.topicosMenu .topicos {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  margin: 35px;
+  align-items: center;
+  text-align: center;
+}/*# sourceMappingURL=menuLateral.css.map */
