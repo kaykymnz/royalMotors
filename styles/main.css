@@ -1,6 +1,7 @@
 @import url(navbarStyle/navbarStyle.css);
-@import url(menuLateralStyle/menuLateral.css);
 @import url(inicialStyle/inicial.css);
+@import url(inputPesquisar/inputPesq.css);
+@import url(destaques/destaques.css);
 *{
     margin: 0;
     padding: 0;

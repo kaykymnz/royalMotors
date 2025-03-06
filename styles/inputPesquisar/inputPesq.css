@@ -1,0 +1,30 @@
+.pesquisar {
+  padding: 4%;
+  display: flex;
+  justify-content: center;
+}
+.pesquisar .campoPesq {
+  display: flex;
+  flex-direction: row;
+  border: solid 2px rgb(59, 150, 255);
+  border-radius: 7px;
+  height: 60px;
+  align-items: center;
+  width: 50%;
+}
+.pesquisar .campoPesq img {
+  max-height: 50px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.pesquisar .campoPesq input[type=text] {
+  border: none;
+  width: 90%;
+  outline: none;
+  font-size: 20px;
+  transition: 0.3s;
+  height: 100%;
+}
+.pesquisar .campoPesq input[type=text]:focus {
+  margin-left: 20px;
+}/*# sourceMappingURL=inputPesq.css.map */

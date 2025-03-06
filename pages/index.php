@@ -7,18 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="../scripts/menu.js"></script>
+    <!-- <script src="../scripts/menu.js"></script> -->
     <div class="ini">
 
 
     <?php
         include('componentes/navbar.php');
-        include('componentes/menuLateral.php');
+        // include('componentes/menuLateral.php');
     ?>
         
     <div class="bannerInicial">
-        <img src="../images/BannerInicial.png" alt="">
+        <img src="../images/BannerInicial.jpg" alt="">
     </div>
+    <?php 
+        include('componentes/inputPesquisa.php');
+    
+    ?>
     </div>
 </body>
 </html>
