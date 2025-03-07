@@ -1,0 +1,169 @@
+.categorias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.categorias .categTxt {
+  color: #004AAD;
+  width: 80%;
+  border-bottom: solid 2px black;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+.categorias .imgsCateg {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+.categorias .imgsCateg .catSedan {
+  background-image: url(../../images/categorias/SEDAN.png);
+  width: 450px;
+  height: 280px;
+  background-size: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.categorias .imgsCateg .catSedan > a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.categorias .imgsCateg .catSedan > a:hover {
+  background-color: rgba(0, 0, 0, 0.836);
+  opacity: 1;
+}
+.categorias .imgsCateg .catSedan:hover {
+  margin-top: -20px;
+}
+.categorias .imgsCateg .catSUV {
+  background-image: url(../../images/categorias/SUV.png);
+  width: 450px;
+  height: 280px;
+  background-size: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.categorias .imgsCateg .catSUV > a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.categorias .imgsCateg .catSUV > a:hover {
+  background-color: rgba(0, 0, 0, 0.836);
+  opacity: 1;
+}
+.categorias .imgsCateg .catSUV:hover {
+  margin-top: -20px;
+}
+.categorias .imgsCateg .catEletrico {
+  background-image: url(../../images/categorias/ELETRICO.png);
+  width: 450px;
+  height: 280px;
+  background-size: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.categorias .imgsCateg .catEletrico > a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.categorias .imgsCateg .catEletrico > a:hover {
+  background-color: rgba(0, 0, 0, 0.836);
+  opacity: 1;
+}
+.categorias .imgsCateg .catEletrico:hover {
+  margin-top: -20px;
+}
+.categorias .imgsCateg .catPicape {
+  background-image: url(../../images/categorias/PICAPE.png);
+  width: 450px;
+  height: 280px;
+  background-size: cover;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.categorias .imgsCateg .catPicape > a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.categorias .imgsCateg .catPicape > a:hover {
+  background-color: rgba(0, 0, 0, 0.836);
+  opacity: 1;
+}
+.categorias .imgsCateg .catPicape:hover {
+  margin-top: -20px;
+}
+
+.marcas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.marcas .marcasTxt {
+  color: #004AAD;
+  width: 80%;
+  border-bottom: solid 2px black;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+.marcas .imgsMarcas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-between;
+  gap: 0px;
+}
+.marcas .imgsMarcas .imgMarca {
+  transition: 0.5s;
+  margin-bottom: 60px;
+}
+.marcas .imgsMarcas .imgMarca img {
+  max-width: 350px;
+}
+.marcas .imgsMarcas .imgMarca:hover {
+  margin-top: -20px;
+}/*# sourceMappingURL=categMarcas.css.map */
