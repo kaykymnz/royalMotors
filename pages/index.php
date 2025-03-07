@@ -21,7 +21,7 @@
     </div>
     <?php 
         include('componentes/inputPesquisa.php');
-    
+        include('componentes/destaques.php')
     ?>
     </div>
 </body>

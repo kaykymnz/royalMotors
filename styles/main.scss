@@ -2,8 +2,11 @@
 @import url(inicialStyle/inicial.css);
 @import url(inputPesquisar/inputPesq.css);
 @import url(destaques/destaques.css);
-* {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}/*# sourceMappingURL=main.css.map */
+
+$corPrimaria: #004AAD;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
