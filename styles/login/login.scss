@@ -1,0 +1,75 @@
+
+.formLogin{
+    display: flex;
+    width: 100vw;
+    background-color: #004AAD;
+    height: 100vh;
+    justify-content: space-between;
+    overflow: hidden;
+    form{
+        // height: 1000px;
+        border-right: #f7f7f765 solid 1px;
+        margin-right: 10px;
+        margin: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        width: 37%;
+        align-items: center;
+        // box-shadow: 10px 10px 5px 10px rgba(0,0,0,0.1);
+        // border-radius: 15px;
+        .imgForm{
+            img{
+                max-width: 300px;
+                margin-top: 130px;
+                opacity: 0.9;
+            }
+        }
+        .inputForm{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            margin: 10px;
+            font-size: 25px;
+            p{
+                margin-top: 100px;
+                margin-bottom: 20px;
+            }
+            input{
+                height: 50px;
+                width: 100%;
+                outline: none;
+                border: none;
+                box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.16);
+                padding-left: 10px;
+                border-radius: 4px;
+                // margin: 10px;
+                font-size: 20px;
+               
+            }
+
+            input[type=submit]{
+                // width: 100%;
+                margin-top: 300px;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 20px;
+                background-color: #b92b2b;
+                font-weight: bold;
+            }
+            input[type=submit]:hover{
+                // width: 100%;
+                background-color: #dd4242;
+                
+            }
+        }
+    }
+    .imgLadoForm{
+        max-width: 73%;
+        img{
+            max-width: 100%;
+        }
+        
+    }
+}

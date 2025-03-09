@@ -1,0 +1,62 @@
+.formLogin {
+  display: flex;
+  width: 100vw;
+  background-color: #004AAD;
+  height: 100vh;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.formLogin form {
+  border-right: rgba(247, 247, 247, 0.3960784314) solid 1px;
+  margin-right: 10px;
+  margin: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 37%;
+  align-items: center;
+}
+.formLogin form .imgForm img {
+  max-width: 300px;
+  margin-top: 130px;
+  opacity: 0.9;
+}
+.formLogin form .inputForm {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 10px;
+  font-size: 25px;
+}
+.formLogin form .inputForm p {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.formLogin form .inputForm input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.16);
+  padding-left: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.formLogin form .inputForm input[type=submit] {
+  margin-top: 300px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+  background-color: #b92b2b;
+  font-weight: bold;
+}
+.formLogin form .inputForm input[type=submit]:hover {
+  background-color: #dd4242;
+}
+.formLogin .imgLadoForm {
+  max-width: 73%;
+}
+.formLogin .imgLadoForm img {
+  max-width: 100%;
+}/*# sourceMappingURL=login.css.map */

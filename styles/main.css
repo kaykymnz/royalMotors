@@ -3,6 +3,7 @@
 @import url(inputPesquisar/inputPesq.css);
 @import url(destaques/destaques.css);
 @import url(categMarcas/categMarcas.css);
+@import url(login/login.css);
 * {
   margin: 0;
   padding: 0;

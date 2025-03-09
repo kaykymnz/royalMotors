@@ -10,13 +10,17 @@
         height: 500px;
         margin-top: 200px;
         gap: 200px;
-        margin: 300px 0;
+        margin-top: 300px;
+        margin-bottom: 200px;
         .destaque{
             border: solid 2px #004AAD;
             // margin: 5%;
             border-radius: 5px;
             text-align: center;
             cursor: pointer;
+            a{
+                
+            }
             img{
                 margin-top: -200px;
                 transition: 0.5s;
@@ -72,7 +76,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 500px;
+        margin-top: 400px;
         border: solid 2px #004AAD;
         border-radius: 5px;        
         cursor: pointer;
