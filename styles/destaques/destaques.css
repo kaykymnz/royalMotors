@@ -19,6 +19,11 @@
   text-align: center;
   cursor: pointer;
 }
+.destaques .destaquesCarros .destaque a {
+  font-style: none;
+  text-decoration: none;
+  color: black;
+}
 .destaques .destaquesCarros .destaque img {
   margin-top: -200px;
   transition: 0.5s;

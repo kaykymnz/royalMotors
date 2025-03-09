@@ -10,6 +10,10 @@
 <body>
     <?php 
         // include('componentes/navbar.php')
+        @session_start();
+        if(@isset($_SESSION['login']) || @$_SESSION['login'] == true ){
+            header("location:telaAdm.php");
+        }
     ?>
     <div class="formLogin">
         
@@ -18,11 +22,11 @@
                 
                 <div class="inputForm">
                 <p>CPF</p>
-                <input type="number" placeholder="Apenas Números">
+                <input type="number" placeholder="Apenas Números" name="cpf" required>
                 </div>
                 <div class="inputForm">
                 <p>Senha</p>
-                <input type="text" placeholder="">
+                <input type="password" placeholder="" name="senha" required>
                 </div>
                 <p>Caso tenha problemas com o Login, contate seu <strong>Administrador</strong>.</p>
                 <div class="inputForm">

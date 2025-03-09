@@ -2,7 +2,7 @@
     <div class="destaqueTxt">Destaques</div>
     <div class="destaquesCarros">
         <div class="destaque">
-        <a href="../login.php">
+        <a href="login.php">
             <img src="../images/sonic.png" alt="">
             <p>Chevrolet Sonic</p>
             <p>R$ 14.000,00</p>
@@ -10,7 +10,7 @@
 
         </div>
         <div class="destaque">
-        <a href="../login.php">
+        <a href="login.php">
             <img src="../images/urus.png" alt="">
             <p>Lamborghini Urus</p>
             <p>R$ 6.344.000,00</p>

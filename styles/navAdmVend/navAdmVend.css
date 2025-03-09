@@ -1,0 +1,34 @@
+.navAdmVend {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 3%;
+}
+.navAdmVend .dirNavAdm {
+  display: flex;
+}
+.navAdmVend .dirNavAdm .nomeFuncao {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  margin-right: 10px;
+}
+.navAdmVend .dirNavAdm .nomeFuncao :nth-child(1) {
+  font-size: 35px;
+}
+.navAdmVend .dirNavAdm .nomeFuncao :nth-child(2) {
+  font-size: 20px;
+}
+.navAdmVend .dirNavAdm .nomeFuncao :nth-child(3) a {
+  font-size: 17px;
+  color: black;
+}
+.navAdmVend .dirNavAdm > img {
+  max-height: 100px;
+  border: solid 1px #004AAD;
+  border-radius: 100%;
+}
+.navAdmVend > img {
+  max-height: 100px;
+}/*# sourceMappingURL=navAdmVend.css.map */
