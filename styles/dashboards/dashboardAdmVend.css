@@ -1,0 +1,84 @@
+.container {
+  width: 80%;
+  margin: auto;
+  background: white;
+}
+
+.tabs {
+  display: flex;
+  height: 60px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: 0 10px;
+  background: #8dc3fd;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.tab-button:hover, .active {
+  background: #0056b3;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  margin: 0 10px;
+  background: white;
+}
+
+.show {
+  display: block;
+}
+
+.conteudo {
+  background-color: #0056b3;
+  padding: 60px;
+  padding-top: 60px;
+  color: white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  height: 800px;
+}
+.conteudo .vendas {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.conteudo .vendas .linhaVendas {
+  width: 2px;
+  background-color: aliceblue;
+  height: 100%;
+}
+.conteudo .vendas .abaEsqVendas {
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.conteudo .vendas .abaDirVendas {
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.conteudo .vendas .abaDirVendas > div :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+  font-size: 50px;
+}
+.conteudo .vendas .abaDirVendas > div :nth-child(2) p {
+  color: rgb(68, 238, 68);
+  font-size: 25px;
+  margin-left: 200px;
+}/*# sourceMappingURL=dashboardAdmVend.css.map */

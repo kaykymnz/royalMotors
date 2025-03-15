@@ -1,0 +1,111 @@
+// .telaDashboardAdm{
+//     // width: 80vw;
+//     background-color: azure;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     .dashboardAdm{
+//         background-color: antiquewhite;
+//         width: 80%;
+//         .dashboardAbas{
+//             display: flex;
+//             width: 20%;
+//             justify-content: space-between;
+//             height: 50px;
+//             align-items: center;
+//         }
+//     }
+// }
+
+.container {
+    width: 80%; 
+    margin: auto; 
+    // padding: 20px; 
+    background: white;
+}
+.tabs {
+    display: flex;
+   
+    // padding: 10px; 
+    height: 60px;
+    // border-radius: 4px;
+    // margin: 10px 10px;
+    
+}
+.tab-button { 
+    flex: 1; 
+    padding: 10px; 
+    color: white; 
+    border: none; 
+    background: none; cursor: pointer; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 0 10px;
+    background: #8dc3fd; 
+    font-size: 18px;
+    transition: 0.3s;
+}
+.tab-button:hover, .active { 
+    background: #0056b3; 
+    color: white;
+}
+.tab-content { 
+    display: none; 
+    margin: 0 10px;
+    background: white; 
+}
+.show { 
+    display: block; 
+}
+
+.conteudo{
+    background-color: #0056b3;
+    padding: 60px;
+    padding-top: 60px;
+    color: white;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 800px;
+    .vendas{
+        display: flex;
+        justify-content: space-between;
+        // background-color: #8dc3fd;
+        height: 100%;
+        .linhaVendas{
+            width: 2px;
+            background-color: aliceblue;
+            height: 100%;
+        }
+        .abaEsqVendas{
+            font-size: 40px;
+            display: flex;
+            flex-direction: column;
+            // gap: 120px;
+            justify-content: space-between;
+            
+        }
+        .abaDirVendas{
+            font-size: 40px;
+            display: flex;
+            flex-direction: column;
+            // gap: 120px;
+            justify-content: space-between;
+            >div{
+                :nth-child(2){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    font-weight: bold;
+                    font-size: 50px;
+                    p{
+                        color: rgb(68, 238, 68);
+                        font-size: 25px;
+                        margin-left: 200px;
+                    }
+                }
+                
+            }
+        }
+    }
+}

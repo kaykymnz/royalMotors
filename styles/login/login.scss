@@ -8,15 +8,18 @@
     overflow: hidden;
     form{
         // height: 1000px;
-        border-right: #f7f7f765 solid 1px;
+        border: #f7f7f765 solid 1px;
+        background-color: #fff;
+        
         margin-right: 10px;
-        margin: 40px 10px;
+        margin: 50px 30px;
         display: flex;
         flex-direction: column;
         width: 37%;
         align-items: center;
         // box-shadow: 10px 10px 5px 10px rgba(0,0,0,0.1);
-        // border-radius: 15px;
+        border-radius: 15px;
+        box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.11);
         .imgForm{
             img{
                 max-width: 300px;
@@ -25,12 +28,12 @@
             }
         }
         .inputForm{
-            width: 70%;
+            width: 75%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            color: white;
-            margin: 10px;
+            align-items: start;
+            // color: white;
+            // margin: 10px;
             font-size: 25px;
             p{
                 margin-top: 100px;
@@ -41,11 +44,12 @@
                 width: 100%;
                 outline: none;
                 border: none;
-                box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.16);
+                border-bottom: #004AAD 2px solid;
+                // box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.16);
                 padding-left: 10px;
-                border-radius: 4px;
+                // border-radius: 4px;
                 // margin: 10px;
-                font-size: 20px;
+                font-size: 15px;
                
             }
 
@@ -57,6 +61,7 @@
                 font-size: 20px;
                 background-color: #b92b2b;
                 font-weight: bold;
+                border: none;
             }
             input[type=submit]:hover{
                 // width: 100%;

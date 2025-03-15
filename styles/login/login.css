@@ -7,13 +7,16 @@
   overflow: hidden;
 }
 .formLogin form {
-  border-right: rgba(247, 247, 247, 0.3960784314) solid 1px;
+  border: rgba(247, 247, 247, 0.3960784314) solid 1px;
+  background-color: #fff;
   margin-right: 10px;
-  margin: 40px 10px;
+  margin: 50px 30px;
   display: flex;
   flex-direction: column;
   width: 37%;
   align-items: center;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.11);
 }
 .formLogin form .imgForm img {
   max-width: 300px;
@@ -21,12 +24,10 @@
   opacity: 0.9;
 }
 .formLogin form .inputForm {
-  width: 70%;
+  width: 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  margin: 10px;
+  align-items: start;
   font-size: 25px;
 }
 .formLogin form .inputForm p {
@@ -38,10 +39,9 @@
   width: 100%;
   outline: none;
   border: none;
-  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.16);
+  border-bottom: #004AAD 2px solid;
   padding-left: 10px;
-  border-radius: 4px;
-  font-size: 20px;
+  font-size: 15px;
 }
 .formLogin form .inputForm input[type=submit] {
   margin-top: 200px;
@@ -50,6 +50,7 @@
   font-size: 20px;
   background-color: #b92b2b;
   font-weight: bold;
+  border: none;
 }
 .formLogin form .inputForm input[type=submit]:hover {
   background-color: #dd4242;

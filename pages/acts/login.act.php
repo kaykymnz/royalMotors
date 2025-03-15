@@ -1,5 +1,5 @@
 <?php
-   
+
     extract($_POST);
     extract($_FILES);
     $senhaUser = md5($senha);
@@ -30,10 +30,12 @@
                 $_SESSION['nome'] = $user['nomeVendedor'];
                 $_SESSION['idVendedor'] = $user['idVendedor'];
                 $target = "location:../telaAdm.php";
+            }else{
+                echo "erro aq";
             }
     }
     // $_SESSION['msg'] = $msg;
     // echo $msg;
-    var_dump($_POST);
+    // var_dump($_POST);
     header($target);
 ?>

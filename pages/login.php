@@ -18,7 +18,7 @@
     <div class="formLogin">
         
         <form action="acts/login.act.php" method="post" enctype="multipart/form-data">
-                <div class="imgForm"><img src="../images/icons/iconCarroBranco.png" alt=""></div>
+                <div class="imgForm"><img src="../images/icons/iconCarroPreto.png" alt=""></div>
                 
                 <div class="inputForm">
                 <p>CPF</p>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="inputForm">
                 <p>Senha</p>
-                <input type="password" placeholder="" name="senha" required>
+                <input type="password" placeholder="Insira sua senha" name="senha" required>
                 </div>
                 <p>Caso tenha problemas com o Login, contate seu <strong>Administrador</strong>.</p>
                 <div class="inputForm">

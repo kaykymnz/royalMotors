@@ -10,9 +10,16 @@
 <body>
     <?php
         require('acts/sec.php');
-        include('componentes/navAdmVend.php')
+        include('componentes/navAdmVend.php');
+
+        if(isset($_SESSION['idAdm'])){
+            include('componentes/dashboardAdm.php');
+        }else if(isset($_SESSION['idVendedor'])){
+            echo "Vendedor";
+        }
+
     ?>
-    <p><a href="acts/logoff.php">Sair</a></p>
-    <p><a href="login.php">Login</a></p>
+    <!-- <p><a href="acts/logoff.php">Sair</a></p>
+    <p><a href="login.php">Login</a></p> -->
 </body>
 </html>
