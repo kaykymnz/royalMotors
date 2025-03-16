@@ -1,20 +1,4 @@
-<!-- <div class="telaDashboardAdm">
-    <div class="dashboardAdm">
-        <div class="dashboardAbas">
-            <p>DashBoard</p>
-            <p>Comercial</p>
-            <p>Estoque</p>
-        </div>
-    </div>
-
-</div> -->
-
-
-
-
-
-
-    <div class="container">
+<div class="container">
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'dashboard')">Dashboard</button>
             <button class="tab-button" onclick="openTab(event, 'carros')">Carros</button>
@@ -22,6 +6,11 @@
         </div>
         <div id="dashboard" class="tab-content show">
             <div class="conteudo">
+
+
+
+
+
                 <div class="vendas">
                     <div class="abaEsqVendas">
                         <div>
@@ -42,7 +31,7 @@
                         </div>
                     </div>
                     <div class="linhaVendas">
-                        
+
                     </div>
                     <div class="abaDirVendas">
                          <div>
@@ -65,16 +54,72 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
         <div id="carros" class="tab-content">
             <div class="conteudo">
-                <h2>Carros</h2>
+                <div class="conteudoCarros">
+                    <div class="pesquisarEstoque">
+                        <img src="../images/icons/lupa.png" alt="">
+                        <input type="text" placeholder="Procure os carros do estoque">
+                    </div>
+                    <div class="btnsEstoqueCarro">
+                        <a href="cadCarro.php"><input type="button" value="Incluir Carro"></a>
+                        <img src="../images/icons/ordenar.png" alt="erro">
+                    </div>
+                </div>
+                </a>
+                <div class="carrosEstoque">
+                        <?php 
+                        require('../db/connect.php');
+                        @session_start();
+                        $carros = mysqli_query($con, "Select * from `carros` ORDER BY `idCarro` DESC");
+                                                    
+                            while($carro=mysqli_fetch_array($carros)){
+                                
+                            echo "  
+                                
+                                    <div class=carroCard>
+                                            <p ><a href=pagVitrineCarro.php?cod=$carro[idCarro]><img src=../images/carrosVenda/$carro[imgPrincipalCarro]></a></p>
+                                            <p class=tituloCarro> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> $carro[marcaCarro] $carro[modeloCarro]</a></p>
+                                            <p class=anoCarro> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> $carro[anoCarro]</a></p>
+                                            <p class=valorCustoTxt> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> Custo: </a></p>
+                                            <p class=valorCusto > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorCustoCarro'], 2, ',', '.')."</a></p>
+                                            <p class=valorVendaTxt > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> Venda:</a></p>
+                                            <p class=valorVenda> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorVendaCarro'], 2, ',', '.')."</a></p>
+                                            <p class=qtdVenda> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> $carro[qtdVendaCarro] Vendas</a></p>
+                                    </div>
+                            ";
+                        }
+                            
+                        ?>
+                    
+                </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
         <div id="comercial" class="tab-content">
             <div class="conteudo">
                 <h2>Comercial</h2>
             </div>
         </div>
+
+
+
+
+
     </div>
 
 

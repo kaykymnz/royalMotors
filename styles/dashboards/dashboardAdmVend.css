@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: 80%;
   margin: auto;
@@ -6,6 +7,7 @@
 
 .tabs {
   display: flex;
+  width: 50%;
   height: 60px;
 }
 
@@ -16,8 +18,8 @@
   border: none;
   background: none;
   cursor: pointer;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   margin: 0 10px;
   background: #8dc3fd;
   font-size: 18px;
@@ -44,9 +46,10 @@
   padding: 60px;
   padding-top: 60px;
   color: white;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
   height: 800px;
+  overflow-y: scroll;
 }
 .conteudo .vendas {
   display: flex;
@@ -81,4 +84,109 @@
   color: rgb(68, 238, 68);
   font-size: 25px;
   margin-left: 200px;
+}
+.conteudo .conteudoCarros {
+  display: flex;
+  flex-direction: column;
+}
+.conteudo .conteudoCarros .pesquisarEstoque {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.conteudo .conteudoCarros .pesquisarEstoque > img {
+  max-width: 50px;
+}
+.conteudo .conteudoCarros .pesquisarEstoque input[type=text] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+.conteudo .btnsEstoqueCarro {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+.conteudo .btnsEstoqueCarro > img {
+  width: 40px;
+  height: 40px;
+}
+.conteudo .btnsEstoqueCarro input[type=button] {
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: #8dc3fd;
+  border-radius: 5px;
+  transition: 0.3s;
+  width: 300px;
+}
+.conteudo .btnsEstoqueCarro input[type=button]:hover {
+  background-color: #5682b1;
+}
+.conteudo .carrosEstoque {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+.conteudo .carrosEstoque .carroCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+.conteudo .carrosEstoque .carroCard a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.conteudo .carrosEstoque .carroCard img {
+  width: 350px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Faz com que a imagem cubra toda a área sem distorção */
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 6px;
+}
+.conteudo .carrosEstoque .carroCard .tituloCarro {
+  font-size: 30px;
+  margin-top: 10px;
+  border-bottom: #0056b3 solid 2px;
+}
+.conteudo .carrosEstoque .carroCard .anoCarro {
+  font-size: 19px;
+  margin-top: 10px;
+}
+.conteudo .carrosEstoque .carroCard .valorCustoTxt {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.conteudo .carrosEstoque .carroCard .valorCusto {
+  font-size: 26px;
+}
+.conteudo .carrosEstoque .carroCard .valorCusto a {
+  color: #0056b3;
+  font-weight: bold;
+}
+.conteudo .carrosEstoque .carroCard .valorVendaTxt {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.conteudo .carrosEstoque .carroCard .valorVenda {
+  font-size: 28px;
+}
+.conteudo .carrosEstoque .carroCard .valorVenda a {
+  color: #0056b3;
+  font-weight: bold;
+}
+.conteudo .carrosEstoque .carroCard .qtdVenda {
+  margin-top: 10px;
+  font-size: 20px;
 }/*# sourceMappingURL=dashboardAdmVend.css.map */
