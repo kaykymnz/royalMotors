@@ -1,9 +1,12 @@
 
-
 .bannerInicial{
+    width: 99vw;
     img{
-        max-width: 100%;
+        max-width: 98vw;
     }
+}
+body{
+    overflow-x: hidden;
 }
 // .ini{
 //     display: flex;

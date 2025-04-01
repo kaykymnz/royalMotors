@@ -1,3 +1,10 @@
+.bannerInicial {
+  width: 99vw;
+}
 .bannerInicial img {
-  max-width: 100%;
+  max-width: 98vw;
+}
+
+body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=inicial.css.map */
