@@ -90,7 +90,7 @@
                                             <p class=valorCusto > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorCustoCarro'], 2, ',', '.')."</a></p>
                                             <p class=valorVendaTxt > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> Venda:</a></p>
                                             <p class=valorVenda> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorVendaCarro'], 2, ',', '.')."</a></p>
-                                            <p class=qtdVenda> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> $carro[qtdVendaCarro] Vendas</a></p>
+                                            
                                     </div>
                             ";
                         }

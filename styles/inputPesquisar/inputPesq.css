@@ -6,7 +6,7 @@
 .pesquisar .campoPesq {
   display: flex;
   flex-direction: row;
-  border: solid 2px rgb(59, 150, 255);
+  border: solid 2px #4f5259;
   border-radius: 7px;
   height: 60px;
   align-items: center;

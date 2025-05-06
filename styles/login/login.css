@@ -1,7 +1,7 @@
 .formLogin {
   display: flex;
   width: 100vw;
-  background-color: #004AAD;
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   justify-content: space-between;
   overflow: hidden;
@@ -39,9 +39,10 @@
   width: 100%;
   outline: none;
   border: none;
-  border-bottom: #004AAD 2px solid;
+  border-bottom: #707070 2px solid;
   padding-left: 10px;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 .formLogin form .inputForm input[type=submit] {
   margin-top: 200px;
@@ -51,6 +52,7 @@
   background-color: #b92b2b;
   font-weight: bold;
   border: none;
+  margin-bottom: 10px;
 }
 .formLogin form .inputForm input[type=submit]:hover {
   background-color: #dd4242;

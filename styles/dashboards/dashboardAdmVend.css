@@ -21,13 +21,13 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   margin: 0 10px;
-  background: #8dc3fd;
+  background: #aaaaaa;
   font-size: 18px;
   transition: 0.3s;
 }
 
 .tab-button:hover, .active {
-  background: #0056b3;
+  background: rgb(66, 66, 66);
   color: white;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .conteudo {
-  background-color: #0056b3;
+  background-color: rgb(66, 66, 66);
   padding: 60px;
   padding-top: 60px;
   color: white;
@@ -118,13 +118,15 @@
   height: 40px;
   cursor: pointer;
   border: none;
-  background-color: #8dc3fd;
+  background-color: #ffffff;
   border-radius: 5px;
   transition: 0.3s;
   width: 300px;
+  color: black;
+  box-shadow: 10px 10px 12px -9px rgba(0, 0, 0, 0.69);
 }
 .conteudo .btnsEstoqueCarro input[type=button]:hover {
-  background-color: #5682b1;
+  background-color: #e0e0e0;
 }
 .conteudo .carrosEstoque {
   display: flex;
@@ -158,7 +160,7 @@
 .conteudo .carrosEstoque .carroCard .tituloCarro {
   font-size: 30px;
   margin-top: 10px;
-  border-bottom: #0056b3 solid 2px;
+  border-bottom: rgb(66, 66, 66) solid 2px;
 }
 .conteudo .carrosEstoque .carroCard .anoCarro {
   font-size: 19px;
@@ -172,7 +174,7 @@
   font-size: 26px;
 }
 .conteudo .carrosEstoque .carroCard .valorCusto a {
-  color: #0056b3;
+  color: rgb(66, 66, 66);
   font-weight: bold;
 }
 .conteudo .carrosEstoque .carroCard .valorVendaTxt {
@@ -183,7 +185,7 @@
   font-size: 28px;
 }
 .conteudo .carrosEstoque .carroCard .valorVenda a {
-  color: #0056b3;
+  color: rgb(66, 66, 66);
   font-weight: bold;
 }
 .conteudo .carrosEstoque .carroCard .qtdVenda {

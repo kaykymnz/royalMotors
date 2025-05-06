@@ -2,7 +2,7 @@
 .formLogin{
     display: flex;
     width: 100vw;
-    background-color: #004AAD;
+    background-color: rgb(255, 255, 255);
     height: 100vh;
     justify-content: space-between;
     overflow: hidden;
@@ -44,12 +44,13 @@
                 width: 100%;
                 outline: none;
                 border: none;
-                border-bottom: #004AAD 2px solid;
+                border-bottom: #707070 2px solid;
                 // box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.16);
                 padding-left: 10px;
                 // border-radius: 4px;
                 // margin: 10px;
                 font-size: 15px;
+                margin-bottom: 10px;
                
             }
 
@@ -62,6 +63,7 @@
                 background-color: #b92b2b;
                 font-weight: bold;
                 border: none;
+                margin-bottom: 10px;
             }
             input[type=submit]:hover{
                 // width: 100%;

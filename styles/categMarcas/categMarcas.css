@@ -6,7 +6,7 @@
   margin-bottom: 200px;
 }
 .categorias .categTxt {
-  color: #004AAD;
+  color: #4f5259;
   width: 80%;
   border-bottom: solid 2px black;
   font-weight: bold;
@@ -147,7 +147,7 @@
   align-items: center;
 }
 .marcas .marcasTxt {
-  color: #004AAD;
+  color: #4f5259;
   width: 80%;
   border-bottom: solid 2px black;
   font-weight: bold;
@@ -167,7 +167,7 @@
 }
 .marcas .imgsMarcas .imgMarca img {
   max-width: 350px;
-  border-bottom: solid 2px #004AAD;
+  border-bottom: solid 2px #4f5259;
 }
 .marcas .imgsMarcas .imgMarca:hover {
   margin-top: -20px;

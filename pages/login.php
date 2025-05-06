@@ -18,7 +18,7 @@
     <div class="formLogin">
         
         <form action="acts/login.act.php" method="post" enctype="multipart/form-data">
-                <div class="imgForm"><img src="../images/icons/iconCarroPreto.png" alt=""></div>
+                <div class="imgForm"><img src="../images/logoApolo.png" alt=""></div>
                 
                 <div class="inputForm">
                 <p>CPF</p>
@@ -36,7 +36,7 @@
                 
         </form>
         <div class="imgLadoForm">
-            <img src="../images/imgTelaLogin.jpg" alt="">
+            <img src="../images/imgTelaLogin.png" alt="">
         </div>
     </div>
 

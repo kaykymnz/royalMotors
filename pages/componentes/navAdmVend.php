@@ -1,5 +1,5 @@
 <div class="navAdmVend">
-    <img src="../images/logo.png" alt="">
+    <img src="../images/logoApolo.png" alt="">
     <div class="dirNavAdm">
         
         <div class="nomeFuncao">
