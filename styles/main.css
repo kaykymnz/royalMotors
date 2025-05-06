@@ -6,6 +6,7 @@
 @import url(login/login.css);
 @import url(navAdmVend/navAdmVend.css);
 @import url(dashboards/dashboardAdmVend.css);
+@import url(cardsCarro/vitCarros.css);
 * {
   margin: 0;
   padding: 0;

@@ -1,0 +1,85 @@
+.mainVitrine {
+  display: flex;
+  margin-top: 50px;
+}
+.mainVitrine > img {
+  max-width: 30%;
+  height: 1100px;
+  margin-left: 10px;
+}
+
+.carrosCards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  margin-left: 2%;
+}
+.carrosCards .carroCard {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.7s;
+  box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.219);
+}
+.carrosCards .carroCard a {
+  text-decoration: none;
+  font-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.carrosCards .carroCard a .tituloCarro {
+  font-size: 30px;
+  margin-left: 10px;
+}
+.carrosCards .carroCard a .motorCarro {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+.carrosCards .carroCard a .anoCarro {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.carrosCards .carroCard a .kmCarro {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.carrosCards .carroCard a .valorVenda {
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.carrosCards .carroCard a .btnVerDetalhes {
+  background-color: #2b76cc;
+  margin: 10px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+  font-size: 22px;
+  font-weight: bold;
+}
+.carrosCards .carroCard a .btnVerDetalhes:hover {
+  background-color: #58aeff;
+}
+.carrosCards .carroCard p {
+  color: black;
+}
+.carrosCards .carroCard p img {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  width: 320px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carrosCards .carroCard:hover {
+  box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.43);
+}/*# sourceMappingURL=vitCarros.css.map */

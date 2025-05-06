@@ -1,90 +1,182 @@
-.destaques {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0px;
+@media (min-width: 1024px) {
+  .destaques {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .destaques .destaquesCarros {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    margin-top: 200px;
+    gap: 200px;
+    margin-top: 300px;
+    margin-bottom: 200px;
+  }
+  .destaques .destaquesCarros .destaque {
+    border: solid 2px #004AAD;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .destaques .destaquesCarros .destaque a {
+    font-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  .destaques .destaquesCarros .destaque img {
+    margin-top: -200px;
+    transition: 0.5s;
+    max-height: 400px;
+    max-width: 600px;
+    margin-bottom: 100px;
+  }
+  .destaques .destaquesCarros .destaque:hover img {
+    margin-top: -240px;
+  }
+  .destaques .destaquesCarros :nth-child(2) {
+    font-size: 40px;
+  }
+  .destaques .destaquesCarros :nth-child(3) {
+    font-size: 80px;
+    color: #004AAD;
+  }
+  .destaques .destaqueTxt {
+    color: #004AAD;
+    width: 80%;
+    border-bottom: solid 2px black;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .maisVendido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+  }
+  .maisVendido .vendidoTxt {
+    color: #004AAD;
+    width: 80%;
+    border-bottom: solid 2px black;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .maisVendido .maisVendidoImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    border: solid 2px #004AAD;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 550px;
+  }
+  .maisVendido .maisVendidoImg img {
+    margin-top: -300px;
+    transition: 0.5s;
+  }
+  .maisVendido .maisVendidoImg :nth-child(2) {
+    font-size: 40px;
+  }
+  .maisVendido .maisVendidoImg :nth-child(3) {
+    font-size: 80px;
+    color: #004AAD;
+  }
+  .maisVendido .maisVendidoImg:hover img {
+    margin-top: -380px;
+  }
 }
-.destaques .destaquesCarros {
-  display: flex;
-  justify-content: space-around;
-  height: 500px;
-  margin-top: 200px;
-  gap: 200px;
-  margin-top: 300px;
-  margin-bottom: 200px;
-}
-.destaques .destaquesCarros .destaque {
-  border: solid 2px #004AAD;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-}
-.destaques .destaquesCarros .destaque a {
-  font-style: none;
-  text-decoration: none;
-  color: black;
-}
-.destaques .destaquesCarros .destaque img {
-  margin-top: -200px;
-  transition: 0.5s;
-  max-height: 400px;
-  max-width: 600px;
-  margin-bottom: 100px;
-}
-.destaques .destaquesCarros .destaque:hover img {
-  margin-top: -240px;
-}
-.destaques .destaquesCarros :nth-child(2) {
-  font-size: 40px;
-}
-.destaques .destaquesCarros :nth-child(3) {
-  font-size: 80px;
-  color: #004AAD;
-}
-.destaques .destaqueTxt {
-  color: #004AAD;
-  width: 80%;
-  border-bottom: solid 2px black;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.maisVendido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 200px;
-}
-.maisVendido .vendidoTxt {
-  color: #004AAD;
-  width: 80%;
-  border-bottom: solid 2px black;
-  font-weight: bold;
-  font-size: 40px;
-}
-.maisVendido .maisVendidoImg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 400px;
-  border: solid 2px #004AAD;
-  border-radius: 5px;
-  cursor: pointer;
-  height: 550px;
-}
-.maisVendido .maisVendidoImg img {
-  margin-top: -300px;
-  transition: 0.5s;
-}
-.maisVendido .maisVendidoImg :nth-child(2) {
-  font-size: 40px;
-}
-.maisVendido .maisVendidoImg :nth-child(3) {
-  font-size: 80px;
-  color: #004AAD;
-}
-.maisVendido .maisVendidoImg:hover img {
-  margin-top: -380px;
+@media (min-width: 1024px) {
+  .destaques {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .destaques .destaquesCarros {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    margin-top: 200px;
+    gap: 200px;
+    margin-top: 300px;
+    margin-bottom: 200px;
+  }
+  .destaques .destaquesCarros .destaque {
+    border: solid 2px #004AAD;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .destaques .destaquesCarros .destaque a {
+    font-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  .destaques .destaquesCarros .destaque img {
+    margin-top: -200px;
+    transition: 0.5s;
+    max-height: 400px;
+    max-width: 600px;
+    margin-bottom: 100px;
+  }
+  .destaques .destaquesCarros .destaque:hover img {
+    margin-top: -240px;
+  }
+  .destaques .destaquesCarros :nth-child(2) {
+    font-size: 40px;
+  }
+  .destaques .destaquesCarros :nth-child(3) {
+    font-size: 80px;
+    color: #004AAD;
+  }
+  .destaques .destaqueTxt {
+    color: #004AAD;
+    width: 80%;
+    border-bottom: solid 2px black;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .maisVendido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+  }
+  .maisVendido .vendidoTxt {
+    color: #004AAD;
+    width: 80%;
+    border-bottom: solid 2px black;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .maisVendido .maisVendidoImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    border: solid 2px #004AAD;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 550px;
+  }
+  .maisVendido .maisVendidoImg img {
+    margin-top: -300px;
+    transition: 0.5s;
+  }
+  .maisVendido .maisVendidoImg :nth-child(2) {
+    font-size: 40px;
+  }
+  .maisVendido .maisVendidoImg :nth-child(3) {
+    font-size: 80px;
+    color: #004AAD;
+  }
+  .maisVendido .maisVendidoImg:hover img {
+    margin-top: -380px;
+  }
 }/*# sourceMappingURL=destaques.css.map */

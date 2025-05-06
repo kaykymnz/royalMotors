@@ -1,0 +1,96 @@
+.mainVitrine{
+    display: flex;
+    // margin: 1% 2%;
+    margin-top: 50px;
+    >img{
+        max-width: 30%;
+        height: 1100px;
+        margin-left: 10px;
+    }
+}
+.carrosCards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-left: 2%;
+
+    .carroCard{
+       
+        background-color: rgb(236, 236, 236);
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        border-radius: 10px;
+        // width: 30%;
+        transition: 0.7s;
+        box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.219);
+        a{
+            text-decoration: none;
+            font-style: none;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            gap: 4px;
+            .tituloCarro{
+                font-size: 30px;
+                margin-left: 10px;
+
+            }
+            .motorCarro{
+                font-size: 20px;
+                margin-left: 10px;
+                margin-bottom: 40px;
+            }
+            .anoCarro{
+                font-size: 20px;
+                margin-left: 10px;
+            }
+            .kmCarro{
+                font-size: 20px;
+                margin-left: 10px;
+            }
+            .valorVenda{
+                font-size: 35px;
+                font-weight: bold;
+                margin-left: 10px;
+                margin-top: 5px;
+                
+            }
+            .btnVerDetalhes{
+                background-color: #2b76cc;
+                margin: 10px;
+                // text-align: center;
+                height: 50px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.7s;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            .btnVerDetalhes:hover{
+                background-color: #58aeff;
+                
+            }
+            
+        }
+        p{
+            color: black;
+
+            img{
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+                width: 320px;        
+                height: 200px;       
+                object-fit: cover; 
+                
+            }
+        }
+
+    }
+    .carroCard:hover{
+        box-shadow: 8px 9px 24px -7px rgba(0,0,0,0.43);
+    }
+}
