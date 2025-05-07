@@ -91,7 +91,7 @@
                                             <p class=valorVendaTxt > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> Venda:</a></p>
                                             <p class=valorVenda> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorVendaCarro'], 2, ',', '.')."</a></p>
                                             
-                                    </div>
+                                    </div> 
                             ";
                         }
                             
