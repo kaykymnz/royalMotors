@@ -8,19 +8,76 @@
         margin-left: 10px;
     }
 }
+.vitrineDireita{
+    // background-color: #62668f;
+    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .pesquisaCarroFiltro{
+        display: flex;
+        // justify-content: space-between;
+        width: 97%;
+        margin: 30px;
+        align-items: center;
+        >img{
+            max-height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .inputPesq{
+            display: flex;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            border: solid 1px black;
+            width: 90%;
+            align-items: center;
+            // width: 1200px;
+            img{
+                max-height: 40px;
+                margin: 0px 10px;
+                
+            }
+            input[type=text]{
+                height: 50px;
+                width: 100%;
+                outline: none;
+                padding-left: 5px;
+                transition: 0.7s;
+                font-size: 20px;
+                border-radius: 2px;
+                border:none;
+            }
+            input:focus{
+                padding-left: 10px;
+            
+            }
+        }
+    }
+    // width: 100%;
+    
+    
+}
 .carrosCards{
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
-    margin-left: 2%;
-
+    // align-items: start;
+    // margin-left: 2%;
+    margin-top: 100px;
+    // width: 95%;
+    // justify-content: flex-start;
+    gap: 30px;
+    width: 97%;
+    // background-color: #062941;
     .carroCard{
        
-        background-color: rgb(236, 236, 236);
+        background-color: rgb(233, 233, 233);
         display: flex;
         flex-direction: column;
-        margin: 10px;
-        border-radius: 10px;
+        // margin: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         // width: 30%;
         transition: 0.7s;
         box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.219);
@@ -57,7 +114,7 @@
                 
             }
             .btnVerDetalhes{
-                background-color: #2b76cc;
+                background-color: #030625;
                 margin: 10px;
                 // text-align: center;
                 height: 50px;
@@ -69,9 +126,10 @@
                 transition: 0.7s;
                 font-size: 22px;
                 font-weight: bold;
+                color: #fff;
             }
             .btnVerDetalhes:hover{
-                background-color: #58aeff;
+                background-color: #062941;
                 
             }
             
@@ -80,8 +138,8 @@
             color: black;
 
             img{
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
                 width: 320px;        
                 height: 200px;       
                 object-fit: cover; 
@@ -91,6 +149,7 @@
 
     }
     .carroCard:hover{
-        box-shadow: 8px 9px 24px -7px rgba(0,0,0,0.43);
+        box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.575);
+        // margin-top: -1px;
     }
 }
