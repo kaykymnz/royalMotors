@@ -97,7 +97,10 @@
                 <option value="PICAPES">PICAPES</option>
             </select>
         </div>
-        
+        <div>
+            <label>Descrição:</label>
+            <input type="text" name="descCarro" required>
+        </div>
         <div>
             <label>Data de Cadastro:</label>
             <input type="date" name="dataCadastroCarro" id="dataCadastroCarro" required readonly>

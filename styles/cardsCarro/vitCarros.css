@@ -63,6 +63,7 @@
   flex-direction: column;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  width: 320px;
   transition: 0.7s;
   box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.219);
 }
@@ -71,6 +72,8 @@
   font-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   gap: 4px;
 }
 .carrosCards .carroCard a .tituloCarro {

@@ -11,10 +11,10 @@
     <?php
     include("componentes/navbar.php");
     // require('acts/sec.php');
-    echo "<div class=mainVitrine>
-    <img src=../images/bannerVertical.png>";
+    // echo "<div class=mainVitrine>
+    // <img src=../images/bannerVertical.png>";
     include('componentes/vitrineCarros.php');
-    echo "<div>";
+    // echo "<div>";
 
 ?>
 </body>

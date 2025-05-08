@@ -5,8 +5,14 @@
 
                         require('../db/connect.php');
                         @session_start();
-                        $carros = mysqli_query($con, "Select * from `carros` WHERE `marcaCarro` = '$marca'");
-                        echo "<div class=vitrineDireita>"; 
+                        $carros = mysqli_query($con, "Select * from `carros` WHERE `marcaCarro` = '$marca' ORDER BY `idCarro` DESC");
+                        // echo "<a href=../ class=navegacaoVitrine>Home>Marcas>$marca</a>";
+                        echo "<div class=mainVitrine>
+                        <img src=../images/bannerVertical.png>";
+
+                        echo "<div class=vitrineDireita>";
+                        
+                        
                         echo "<div class=pesquisaCarroFiltro>
                                 <div class=inputPesq>
                                         <img src=../images/icons/lupa.png alt=erro>
@@ -30,5 +36,6 @@
                                  </div>";
                         }
                          echo "</div>";
-                                echo "</div>"
+                                echo "</div>";
+                                echo "<div>";
                         ?>
