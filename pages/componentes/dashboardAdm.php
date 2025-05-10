@@ -1,8 +1,24 @@
+<script>
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
 <div class="container">
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'dashboard')">Dashboard</button>
-            <button class="tab-button" onclick="openTab(event, 'carros')">Carros</button>
-            <button class="tab-button" onclick="openTab(event, 'comercial')">Comercial</button>
+            <button class="tab-button" onclick="openTab(event, 'carros')"> Carros </button>
+            <button class="tab-button" onclick="openTab(event, 'comercial')"> Comercial </button>
         </div>
         <div id="dashboard" class="tab-content show">
             <div class="conteudo">
@@ -103,13 +119,6 @@
 
 
 
-
-
-
-
-
-
-
         <div id="comercial" class="tab-content">
             <div class="conteudo">
                 <h2>Comercial</h2>
@@ -123,19 +132,5 @@
     </div>
 
 
-    <script>
-        function openTab(evt, tabName) {
-            let i, tabcontent, tabbuttons;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tabbuttons = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
+
 

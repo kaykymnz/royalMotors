@@ -98,8 +98,8 @@
             </select>
         </div>
         <div>
-            <label>Descrição:</label>
-            <input type="text" name="descCarro" required>
+            <label>Descrição:</label><br>
+            <textarea name="descCarro" rows="30" cols="50" required></textarea>
         </div>
         <div>
             <label>Data de Cadastro:</label>
@@ -111,7 +111,7 @@
         
         <div>
             <label>Imagem Principal:</label>
-            <input type="file" name="img1" accept="image/*" onchange="previewImage(event, 'preview1')" required>
+            <input type="file" name="img1" accept="image/*" onchange="previewImage(event, 'preview1')">
             <img id="preview1" src="" alt="Preview" style="max-width: 200px; display: none; margin-top: 10px;">
         </div>
         

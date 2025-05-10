@@ -2,10 +2,11 @@
         require('../../db/connect.php');
         @session_start();
         // $cod = $_SESSION['cod'];
-        // var_dump($_SESSION);
-
+       var_dump($_POST);
+      //   echo $_POST;
         extract($_FILES);
         extract($_POST);
+        
 
         // $imagens = [];
         // $destino = "../../images/carrosVenda/";

@@ -50,7 +50,7 @@
     <div class="tituloContato">
         <?php echo "<div class=tituloDesc>
                         <h3>$carro[marcaCarro] $carro[modeloCarro] $carro[anoCarro] $carro[motorCarro]</h3>
-                        <p>$carro[descCarro]</p>
+                        <p>"; echo nl2br($carro['descCarro']). " </p>
                     </div>"; ?>
          <p> <input type="button" value="Entrar em contato com vendedor"></p>
     </div>
