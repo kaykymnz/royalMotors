@@ -1,0 +1,61 @@
+.footer {
+  background-color: #111;
+  color: #ddd;
+  padding: 3rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.footer__logo {
+  font-size: 1.8rem;
+  color: #facc15;
+  margin-bottom: 0.5rem;
+}
+.footer__description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.footer__section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.footer__section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer__section ul li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+.footer__section ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+.footer__section ul li a:hover {
+  color: #facc15;
+}
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.footer__socials a {
+  color: #ddd;
+}
+.footer__socials a:hover {
+  color: #facc15;
+}
+.footer__bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.85rem;
+  color: #aaa;
+}/*# sourceMappingURL=footer.css.map */

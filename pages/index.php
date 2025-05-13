@@ -24,6 +24,7 @@
         include('componentes/inputPesquisa.php');
         include('componentes/destaques.php');
         include('componentes/categMarcas.php');
+        include('componentes/footer.php')
     ?>
     </div>
 </body>
