@@ -34,7 +34,7 @@
                 echo "erro aq";
             }
     }
-    // $_SESSION['msg'] = $msg;
+    $_SESSION['msg'] = $msg;
     // echo $msg;
     // var_dump($_POST);
     header($target);

@@ -9,6 +9,7 @@
 @import url(cardsCarro/vitCarros.css);
 @import url(pagVitrineCarro/pagVitrineCarro.css);
 @import url(footer/footer.css);
+@import url(formModal/formModal.css);
 * {
   margin: 0;
   padding: 0;

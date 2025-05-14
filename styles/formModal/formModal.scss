@@ -1,0 +1,43 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Modal grande */
+  .modal {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    padding: 30px;
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  /* Botão fechar */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Inputs e textarea */
+  .modal input, .modal textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  

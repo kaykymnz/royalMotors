@@ -17,7 +17,7 @@
         }else if(isset($_SESSION['idVendedor'])){
             echo "Vendedor";
         }
-
+        include('componentes/footer.php')
     ?>
     <!-- <p><a href="acts/logoff.php">Sair</a></p>
     <p><a href="login.php">Login</a></p> -->

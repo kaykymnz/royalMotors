@@ -15,7 +15,7 @@
     // <img src=../images/bannerVertical.png>";
     include('componentes/vitrineCarros.php');
     // echo "<div>";
-
+    include('componentes/footer.php')
 ?>
 </body>
 </html>

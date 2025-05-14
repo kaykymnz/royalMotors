@@ -10,7 +10,7 @@
     <?php
         include("componentes/navbar.php");
         include("componentes/vitrineCarros.php");
-    
+        include('componentes/footer.php')
     
     
     ?>

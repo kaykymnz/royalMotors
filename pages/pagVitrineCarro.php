@@ -15,8 +15,14 @@
 
                         @session_start();
                         $carros = mysqli_query($con, "Select * from `carros` WHERE `idCarro` = '$cod'");
-                        $carro = mysqli_fetch_array($carros);    
+                        $carro = mysqli_fetch_array($carros);  
+                        
+                        if (isset($_SESSION['msgSolic'])) {
+                            echo "<h1 class=msgAvisoSolic>". $_SESSION['msgSolic']. "</h1>" ;
+                            unset($_SESSION['msgSolic']); // limpa após exibir, se quiser
+                        }
     ?>
+    
     <div class="mainCarro">
         
            <?php echo "<img src=../images/carrosVenda/$carro[imgPrincipalCarro] alt= >"; ?>
@@ -52,7 +58,10 @@
                         <h3>$carro[marcaCarro] $carro[modeloCarro] $carro[anoCarro] $carro[motorCarro]</h3>
                         <p>"; echo nl2br($carro['descCarro']). " </p>
                     </div>"; ?>
-         <p> <input type="button" value="Entrar em contato com vendedor"></p>
+         <p> <input type="button" value="Entrar em contato com vendedor" id="abrirModal"></p>
     </div>
+    <?php include('componentes/footer.php');
+          include('componentes/formModal.php') ?>
+
 </body>
 </html>

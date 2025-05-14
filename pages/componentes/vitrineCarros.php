@@ -31,11 +31,12 @@
                                             <p class=anoCarro>$carro[anoCarro]</p>
                                             <p class=kmCarro>$carro[kmCarro] km</p>
                                             <p class=valorVenda>R$ "; echo number_format($carro['valorVendaCarro'], 2, ',', '.')."</p>
-                                            <p class=btnVerDetalhes> Ver Detalhes <p/p
+                                            <p class=btnVerDetalhes> Ver Detalhes </p>
                                             </a>
                                  </div>";
                         }
                          echo "</div>";
-                                echo "</div>";
-                                echo "<div>";
+                         echo "</div>"; 
+                         echo "</div>";
+                                
                         ?>
