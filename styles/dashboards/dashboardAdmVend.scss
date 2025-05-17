@@ -207,3 +207,50 @@
         
     }
 }
+
+
+
+////// estilização do vendedor
+/// 
+/// 
+/// 
+/// 
+
+.tabelaNegociacoes {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin-top: 20px;
+    input[type=button]{
+        height: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #3fcfb0;
+        transition: 0.3s;
+        padding: 5px;
+        width: 160px;
+        border-radius: 4px;
+    }
+    input[type=button]:hover{
+        background-color: #297967;
+    }
+    
+
+}
+
+.tabelaNegociacoes thead {
+    // background-color: #f0f0f0;
+}
+
+.tabelaNegociacoes th,
+.tabelaNegociacoes td {
+    padding: 10px;
+    font-size: 22px;
+    // border: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabelaNegociacoes tbody tr:nth-child(even) {
+    // background-color: #fafafa;
+}

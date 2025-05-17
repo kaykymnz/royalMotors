@@ -192,4 +192,32 @@
 .conteudo .carrosEstoque .carroCard .qtdVenda {
   margin-top: 10px;
   font-size: 20px;
+}
+
+.tabelaNegociacoes {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+.tabelaNegociacoes input[type=button] {
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #3fcfb0;
+  transition: 0.3s;
+  padding: 5px;
+  width: 160px;
+  border-radius: 4px;
+}
+.tabelaNegociacoes input[type=button]:hover {
+  background-color: #297967;
+}
+
+.tabelaNegociacoes th,
+.tabelaNegociacoes td {
+  padding: 10px;
+  font-size: 22px;
+  text-align: left;
 }/*# sourceMappingURL=dashboardAdmVend.css.map */

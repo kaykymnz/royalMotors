@@ -15,7 +15,7 @@
         if(isset($_SESSION['idAdm'])){
             include('componentes/dashboardAdm.php');
         }else if(isset($_SESSION['idVendedor'])){
-            echo "Vendedor";
+            include('componentes/dashboardVend.php');
         }
         include('componentes/footer.php')
     ?>
