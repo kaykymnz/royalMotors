@@ -83,22 +83,23 @@ if (isset($_POST['iniciar']) && isset($_POST['idNegoc'])) {
 
                 while($solicitacao = mysqli_fetch_array($solicitacoes)) {
                     echo "<tr>";
-                    echo "<td>{$solicitacao['idNegoc']}</td>";
-                    echo "<td>{$solicitacao['nomeCliente']}</td>";
-                    echo "<td>{$solicitacao['marcaCarro']} {$solicitacao['modeloCarro']} {$solicitacao['anoCarro']}</td>";
-                    echo "<td>{$solicitacao['emailCliente']}</td>";
-                    echo "<td>{$solicitacao['telefoneCliente']}</td>";
+                    
 
-                    echo "<td>";
+                    
                     if ($solicitacao['statusNegoc'] === 'pendente') {
-                        echo "<form method='POST' class=btnInc>
-                                <input type='hidden' name='idNegoc' value='{$solicitacao['idNegoc']}'>
-                                <input type='submit' name='iniciar' value='Iniciar Negociação'>
-                              </form>";
-                    } else {
-                        echo "<span>Em andamento</span>";
+                            echo "<td>{$solicitacao['idNegoc']}</td>";
+                            echo "<td>{$solicitacao['nomeCliente']}</td>";
+                            echo "<td>{$solicitacao['marcaCarro']} {$solicitacao['modeloCarro']} {$solicitacao['anoCarro']}</td>";
+                            echo "<td>{$solicitacao['emailCliente']}</td>";
+                            echo "<td>{$solicitacao['telefoneCliente']}</td>";
+                            echo "<td>";
+                            echo "<form method='POST' class=btnInc>
+                                    <input type='hidden' name='idNegoc' value='{$solicitacao['idNegoc']}'>
+                                    <input type='submit' name='iniciar' value='Iniciar Negociação'>
+                                </form>";
+                            echo "</td>";
                     }
-                    echo "</td>";
+
                     echo "</tr>";
                 }
 
@@ -111,6 +112,73 @@ if (isset($_POST['iniciar']) && isset($_POST['idNegoc'])) {
     <div id="carros" class="tab-content">
         <div class="conteudo">
             <!-- Conteúdo da aba "Em andamento" -->
+
+            <?php 
+                $negociacoes = mysqli_query($con, "SELECT 
+                                                        negociacao.idNegoc,
+                                                        negociacao.dtaSolic,
+                                                        negociacao.statusNegoc,
+                                                        negociacao.dtaInicioContato,
+                                                        cliente.nomeCliente,
+                                                        cliente.emailCliente,
+                                                        cliente.telefoneCliente,
+                                                        carros.modeloCarro,
+                                                        carros.anoCarro,
+                                                        carros.marcaCarro
+                                                    FROM 
+                                                        negociacao
+                                                    INNER JOIN 
+                                                        cliente ON negociacao.idCliente = cliente.idCliente
+                                                    INNER JOIN 
+                                                        carros ON negociacao.idCarro = carros.idCarro");
+
+                echo "<table class='tabelaNegociacoes'>";
+                echo "<thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Carro</th>
+                            <th>Data Solicitação</th>
+                            <th>Ínicio da Negociação</th>
+                            <th>Valor Final</th>
+                            <th></th>
+                        </tr>
+                      </thead>";
+                echo "<tbody>";
+
+                while($negociacao = mysqli_fetch_array($negociacoes)) {
+                    echo "<tr>";
+                    
+
+                    
+                    if ($negociacao['statusNegoc'] == 'em andamento') {
+                            echo "<td>{$negociacao['idNegoc']}</td>";
+                            echo "<td>{$negociacao['nomeCliente']}</td>";
+                            echo "<td>{$negociacao['marcaCarro']} {$negociacao['modeloCarro']} {$negociacao['anoCarro']}</td>";
+                            echo "<td>{$negociacao['dtaSolic']}</td>";
+                            echo "<td>{$negociacao['dtaInicioContato']}</td>";
+                            echo "<td><input type=text placeholder= 'Valor Vendido'</td>";
+                            echo "<td>";
+                            echo "<form method='POST' class=btnVendido>
+                                    <input type='hidden' name='idNegoc' value='Vender'>
+                                    <input type='submit' name='iniciar' value='Iniciar Negociação'>
+                                </form>";
+                            echo "</td>";
+                            echo "<td>";
+                            echo "<form method='POST' class=btnCancelado>
+                                    <input type='hidden' name='idNegoc' value='Cancelar'>
+                                    <input type='submit' name='iniciar' value='Iniciar Negociação'>
+                                </form>";
+                            echo "</td>";
+                    }
+
+                    echo "</tr>";
+                }
+
+                echo "</tbody>";
+                echo "</table>";                             
+            ?>
+
         </div>
     </div>
 

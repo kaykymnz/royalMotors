@@ -240,15 +240,16 @@
 }
 .btnInc{
     input{
-        height: 30px;
+        height: 40px;
         border: none;
         outline: none;
         cursor: pointer;
         background-color: #3fcfb0;
         transition: 0.3s;
         padding: 5px;
-        width: 160px;
+        width: 200px;
         border-radius: 4px;
+        font-size: 20px;
     }
     input:hover{
         background-color: #297967;
