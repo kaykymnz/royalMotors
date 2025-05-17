@@ -200,7 +200,15 @@
   font-family: sans-serif;
   margin-top: 20px;
 }
-.tabelaNegociacoes input[type=button] {
+
+.tabelaNegociacoes th,
+.tabelaNegociacoes td {
+  padding: 10px;
+  font-size: 22px;
+  text-align: left;
+}
+
+.btnInc input {
   height: 30px;
   border: none;
   outline: none;
@@ -211,13 +219,6 @@
   width: 160px;
   border-radius: 4px;
 }
-.tabelaNegociacoes input[type=button]:hover {
+.btnInc input:hover {
   background-color: #297967;
-}
-
-.tabelaNegociacoes th,
-.tabelaNegociacoes td {
-  padding: 10px;
-  font-size: 22px;
-  text-align: left;
 }/*# sourceMappingURL=dashboardAdmVend.css.map */
