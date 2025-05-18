@@ -19,7 +19,7 @@
     </div>
 </div>
 <div class="maisVendido">
-    <div class="vendidoTxt">Sucesso de vendas da Royal Motors</div>
+    <div class="vendidoTxt">Sucesso de vendas da Apolo Veiculos</div>
         <div class="maisVendidoImg">
             <img src="../images/civic.png" alt="">
             <p>Honda Civic</p>
