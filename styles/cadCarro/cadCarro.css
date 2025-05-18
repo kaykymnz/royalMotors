@@ -1,0 +1,57 @@
+.cadCarro {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cadCarro input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.cadCarro .formCadCarro {
+  gap: 120px;
+  display: flex;
+  -moz-column-count: 2;
+       column-count: 2;
+  margin: 20px;
+  background-color: rgb(163, 196, 194);
+  padding: 30px;
+  border-radius: 5px;
+}
+.cadCarro .formCadCarro input[type=text] {
+  height: 30px;
+  padding-left: 5px;
+  transition: 0.3s;
+  border: solid 2px rgba(41, 41, 41, 0.144);
+  outline: none;
+}
+.cadCarro .formCadCarro input[type=text]:focus {
+  border-radius: 5px;
+  border: solid 2px black;
+}
+.cadCarro .formCadCarro input[type=date] {
+  display: none;
+}
+.cadCarro .formCadCarro select {
+  height: 30px;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 5px;
+  outline: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  outline: none;
+}
+.cadCarro .formCadCarro textarea {
+  resize: none;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 5px;
+  transition: 0.3s;
+  border: solid 2px rgba(41, 41, 41, 0.144);
+}
+.cadCarro .formCadCarro textarea:focus {
+  border-radius: 10px;
+  border: solid 2px black;
+  outline: none;
+}/*# sourceMappingURL=cadCarro.css.map */

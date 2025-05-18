@@ -26,7 +26,20 @@
     </script>
 </head>
 <body>
-<form action="acts/cadCarro.act.php" method="POST" enctype="multipart/form-data">
+    <?php include('componentes/navbar.php');
+    @session_start();
+    if(isset($_SESSION['msgCadCarro'])){
+        echo "<p> $_SESSION[msgCadCarro]</p>";
+        unset($_SESSION['msgCadCarro']);
+    }?>
+    
+    <div class="cadCarro">
+
+    
+<form action="acts/cadCarro.act.php" method="POST" enctype="multipart/form-data" class="formCadCarro">
+    <div class="parte1">
+
+
         <div>
             <label>Modelo:</label>
             <input type="text" name="modeloCarro" required>
@@ -92,24 +105,30 @@
             <label>Categoria:</label>
             <select name="categoriaCarro" required>
                 <option value="SUVS">SUVS</option>
-                <option value="ELETRICOS">ELETRICOS</option>
+                <option value="HATCH">HATCH</option>
                 <option value="SEDANS">SEDANS</option>
                 <option value="PICAPES">PICAPES</option>
             </select>
         </div>
+            </div>
+            <div class="parte2">
+
+
+        <!-- <br> -->
         <div>
             <label>Descrição:</label><br>
             <textarea name="descCarro" rows="30" cols="50" required></textarea>
         </div>
         <div>
-            <label>Data de Cadastro:</label>
+            <!-- <label>Data de Cadastro:</label> -->
             <input type="date" name="dataCadastroCarro" id="dataCadastroCarro" required readonly>
             <script>
                 document.getElementById('dataCadastroCarro').value = new Date().toISOString().split('T')[0];
             </script>
         </div>
-        
-        <div>
+        </div>
+        <div class="parte3">
+<div>
             <label>Imagem Principal:</label>
             <input type="file" name="img1" accept="image/*" onchange="previewImage(event, 'preview1')">
             <img id="preview1" src="" alt="Preview" style="max-width: 200px; display: none; margin-top: 10px;">
@@ -132,10 +151,15 @@
             <input type="file" name="img4" accept="image/*" onchange="previewImage(event, 'preview4')">
             <img id="preview4" src="" alt="Preview" style="max-width: 200px; display: none; margin-top: 10px;">
         </div>
+        <button type="submit">Cadastrar</button>
+        </div>
+        
         
 
         
-        <button type="submit">Cadastrar</button>
+        
+    
     </form>
+    </div>
 </body>
 </html>

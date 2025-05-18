@@ -39,8 +39,8 @@
        }
     
 echo $msg;
-$_SESSION['msg'] = $msg;
-// header("location:produtos.php");
+$_SESSION['msgCadCarro'] = $msg;
+header("location:../cadCarro.php");
 
 
 
