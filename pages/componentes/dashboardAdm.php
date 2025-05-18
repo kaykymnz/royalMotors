@@ -14,6 +14,47 @@
         }
     </script>
 
+
+<?php
+        require('../db/connect.php');
+
+        // ✅ Vendas da Semana
+        $sqlSemana = "SELECT COUNT(*) AS vendas_semana
+                    FROM negociacao
+                    WHERE statusNegoc = 'vendido'
+                    AND YEARWEEK(dtaConclusao, 1) = YEARWEEK(CURDATE(), 1)";
+        $resSemana = mysqli_fetch_assoc(mysqli_query($con, $sqlSemana));
+
+        // ✅ Vendas do Mês
+        $sqlMes = "SELECT COUNT(*) AS vendas_mes
+                FROM negociacao
+                WHERE statusNegoc = 'vendido'
+                AND MONTH(dtaConclusao) = MONTH(CURDATE())
+                AND YEAR(dtaConclusao) = YEAR(CURDATE())";
+        $resMes = mysqli_fetch_assoc(mysqli_query($con, $sqlMes));
+
+        // ✅ Vendas do Semestre
+        $sqlSemestre = "SELECT COUNT(*) AS vendas_semestre
+                        FROM negociacao
+                        WHERE statusNegoc = 'vendido'
+                        AND YEAR(dtaConclusao) = YEAR(CURDATE())
+                        AND (
+                            (MONTH(CURDATE()) <= 6 AND MONTH(dtaConclusao) BETWEEN 1 AND 6)
+                            OR
+                            (MONTH(CURDATE()) > 6 AND MONTH(dtaConclusao) BETWEEN 7 AND 12)
+                        )";
+        $resSemestre = mysqli_fetch_assoc(mysqli_query($con, $sqlSemestre));
+
+        // ✅ Vendas do Ano
+        $sqlAno = "SELECT COUNT(*) AS vendas_ano
+                FROM negociacao
+                WHERE statusNegoc = 'vendido'
+                AND YEAR(dtaConclusao) = YEAR(CURDATE())";
+        $resAno = mysqli_fetch_assoc(mysqli_query($con, $sqlAno));
+?>
+
+
+
 <div class="container">
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'dashboard')">Dashboard</button>
@@ -30,21 +71,21 @@
                 <div class="vendas">
                     <div class="abaEsqVendas">
                         <div>
-                            <p>Vendas nesta Semana</p>
-                            <h2>30</h2>
-                        </div>
-                        <div>
-                            <p>Vendas neste Mês</p>
-                            <h2>40</h2>
-                        </div>
-                        <div>
-                            <p>Vendas nesta Semestre</p>
-                            <h2>130</h2>
-                        </div>
-                        <div>
-                            <p>Vendas neste Ano</p>
-                            <h2>504</h2>
-                        </div>
+                                <p>Vendas nesta Semana</p>
+                                <h2><?php echo $resSemana['vendas_semana']; ?></h2>
+                            </div>
+                            <div>
+                                <p>Vendas neste Mês</p>
+                                <h2><?php echo $resMes['vendas_mes']; ?></h2>
+                            </div>
+                            <div>
+                                <p>Vendas neste Semestre</p>
+                                <h2><?php echo $resSemestre['vendas_semestre']; ?></h2>
+                            </div>
+                            <div>
+                                <p>Vendas neste Ano</p>
+                                <h2><?php echo $resAno['vendas_ano']; ?></h2>
+                            </div>
                     </div>
                     <div class="linhaVendas">
 

@@ -200,6 +200,37 @@
   font-family: sans-serif;
   margin-top: 20px;
 }
+.tabelaNegociacoes .vendidoStt {
+  color: #297967;
+}
+.tabelaNegociacoes .canceladoStt {
+  color: rgb(224, 61, 61);
+}
+.tabelaNegociacoes input[type=text] {
+  height: 30px;
+  padding-left: 5px;
+  width: 250px;
+}
+.tabelaNegociacoes input[value=Vender] {
+  background-color: #297967;
+  color: white;
+  height: 30px;
+  width: 250px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tabelaNegociacoes input[value=Cancelar] {
+  background-color: rgb(224, 61, 61);
+  color: white;
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .tabelaNegociacoes th,
 .tabelaNegociacoes td {

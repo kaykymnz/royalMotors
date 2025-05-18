@@ -222,8 +222,39 @@
     font-family: sans-serif;
     margin-top: 20px;
     
-    
+    .vendidoStt{
+        color: #297967;
+    }
+    .canceladoStt{
+        color: rgb(224, 61, 61);
+    }
 
+    input[type=text]{
+        height: 30px;
+        padding-left: 5px;
+        width: 250px;
+    }
+    input[value=Vender]{
+        background-color: #297967;
+        color: white;
+        height: 30px;
+        width: 250px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+        // margin-left: 40px;
+    }
+     input[value=Cancelar]{
+        background-color: rgb(224, 61, 61);
+        color: white;
+        height: 30px;
+        width: 100px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 }
 
 .tabelaNegociacoes thead {
@@ -236,8 +267,10 @@
     font-size: 22px;
     // border: 1px solid #ccc;
     text-align: left;
+    // display: flex;
     
 }
+
 .btnInc{
     input{
         height: 40px;
@@ -257,5 +290,6 @@
 }
 
 .tabelaNegociacoes tbody tr:nth-child(even) {
-    // background-color: #fafafa;
+    // background-color: #bebebe;
+    // color: black;
 }

@@ -197,6 +197,7 @@ if (isset($_POST['cancelar']) && isset($_POST['idNegoc'])) {
                             <input type='hidden' name='idNegoc' value='{$negociacao['idNegoc']}'>
                             <input type='submit' name='vender' value='Vender'>
                         </form>
+
                       </td>";
                 echo "<td>
                         <form method='POST' class='btnCancelado'>
@@ -258,7 +259,13 @@ if (isset($_POST['cancelar']) && isset($_POST['idNegoc'])) {
                 echo "<td>{$finalizada['marcaCarro']} {$finalizada['modeloCarro']} {$finalizada['anoCarro']}</td>";
                 echo "<td>{$finalizada['valorVenda']}</td>";
                 echo "<td>{$finalizada['dtaConclusao']}</td>";
-                echo "<td>{$finalizada['statusNegoc']}</td>";
+
+                if($finalizada['statusNegoc']=='vendido'){
+                echo "<td class=vendidoStt>{$finalizada['statusNegoc']} </td>";
+                }else{
+                echo "<td class=canceladoStt>{$finalizada['statusNegoc']} </td>";
+                }
+               
                 echo "</tr>";
             }
 
