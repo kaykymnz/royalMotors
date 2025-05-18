@@ -17,7 +17,7 @@
             $_SESSION['idAdm'] = $user['idAdm'];
             $target = "location:../telaAdm.php";
         }else{
-            
+            $target = "location:../login.php";
         }
 
     }else{
@@ -31,7 +31,7 @@
                 $_SESSION['idVendedor'] = $user['idVendedor'];
                 $target = "location:../telaAdm.php";
             }else{
-                echo "erro aq";
+                $target = "location:../login.php";
             }
     }
     $_SESSION['msg'] = $msg;
