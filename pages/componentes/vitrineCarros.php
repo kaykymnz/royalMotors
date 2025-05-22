@@ -5,8 +5,12 @@
 
                         require('../db/connect.php');
                         @session_start();
-                        $carros = mysqli_query($con, "Select * from `carros` WHERE `marcaCarro` = '$marca' ORDER BY `idCarro` DESC");
-                        // echo "<a href=../ class=navegacaoVitrine>Home>Marcas>$marca</a>";
+
+                        $carros = mysqli_query($con, "SELECT DISTINCT carros.* FROM carros WHERE statusCarro = 'disponivel'
+                                                        AND marcaCarro = '$marca'
+                                                        ORDER BY idCarro DESC");
+
+                   
                         echo "<div class=mainVitrine>
                         <img src=../images/bannerVertical.png>";
 

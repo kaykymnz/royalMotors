@@ -29,8 +29,8 @@
 
 
         $descCarro = mysqli_real_escape_string($con, $descCarro);
-        if(mysqli_query($con, "INSERT INTO `carros` (`idCarro`,`modeloCarro`,`marcaCarro`, `anoCarro`, `motorCarro`,`kmCarro`,`valorCustoCarro`, `valorVendaCarro`, `corCarro`, `categoriaCarro`, `descCarro`, `dtaCadastroCarro`, `imgPrincipalCarro`, `imgCarro2`, `imgCarro3`, `imgCarro4`)
-         VALUES (NULL, '$modeloCarro', '$marcaCarro', '$anoCarro', '$motorCarro', '$kmCarro', '$valorCustoCarro', '$valorVendaCarro','$corCarro', '$categoriaCarro', '$descCarro','$dataCadastroCarro', '$imgCarro1', '$imgCarro2', '$imgCarro3', '$imgCarro4');")){
+        if(mysqli_query($con, "INSERT INTO `carros` (`idCarro`,`modeloCarro`,`marcaCarro`, `anoCarro`, `motorCarro`,`kmCarro`,`valorCustoCarro`, `valorVendaCarro`, `corCarro`, `categoriaCarro`, `descCarro`, `dtaCadastroCarro`,`statusCarro`, `imgPrincipalCarro`, `imgCarro2`, `imgCarro3`, `imgCarro4`)
+         VALUES (NULL, '$modeloCarro', '$marcaCarro', '$anoCarro', '$motorCarro', '$kmCarro', '$valorCustoCarro', '$valorVendaCarro','$corCarro', '$categoriaCarro', '$descCarro','$dataCadastroCarro','disponivel', '$imgCarro1', '$imgCarro2', '$imgCarro3', '$imgCarro4');")){
         $msg = "Carro gravado com sucesso!";
         echo "<a href=../cadCarro.php>Cadastrar Outro </a><br>";
   }else{

@@ -48,25 +48,25 @@
         <div>
             <label>Marca:</label>
             <select name="marcaCarro" required>
-            <option value="Audi">Audi</option>
+            <!-- <option value="Audi">Audi</option> -->
                 <option value="BMW">BMW</option>
-                <option value="BYD">BYD</option>
+                <!-- <option value="BYD">BYD</option> -->
                 <option value="Chevrolet">Chevrolet</option>
-                <option value="Citroën">Citroën</option>
+                <!-- <option value="Citroën">Citroën</option> -->
                 <option value="Fiat">Fiat</option>
                 <option value="Ford">Ford</option>
                 <option value="Honda">Honda</option>
                 <option value="Hyundai">Hyundai</option>
-                <option value="Jeep">Jeep</option>
-                <option value="Kia">Kia</option>
-                <option value="Mercedes">Mercedes</option>
+                <!-- <option value="Jeep">Jeep</option>
+                <option value="Kia">Kia</option> -->
+                <!-- <option value="Mercedes">Mercedes</option> -->
                 <option value="Mitsubishi">Mitsubishi</option>
-                <option value="Nissan">Nissan</option>
-                <option value="Peugeot">Peugeot</option>
-                <option value="Porsche">Porsche</option>
+                <!-- <option value="Nissan">Nissan</option> -->
+                <!-- <option value="Peugeot">Peugeot</option> -->
+                <!-- <option value="Porsche">Porsche</option> -->
                 <option value="Renault">Renault</option>
-                <option value="Subaru">Subaru</option>
-                <option value="Suzuki">Suzuki</option>
+                <!-- <option value="Subaru">Subaru</option>
+                <option value="Suzuki">Suzuki</option> -->
                 <option value="Toyota">Toyota</option>
                 <option value="Volkswagen">Volkswagen</option>
             </select>
@@ -74,7 +74,7 @@
         
         <div>
             <label>Ano:</label>
-            <input type="text" name="anoCarro" required>
+            <input type="number" name="anoCarro" required>
         </div>
         
         <div>
@@ -83,22 +83,34 @@
         </div>
         <div>
             <label>Quilometragem:</label>
-            <input type="text" name="kmCarro" required>
+            <input type="number" name="kmCarro" required>
         </div>
         
         <div>
             <label>Valor de Custo:</label>
-            <input type="text" name="valorCustoCarro" required>
+            <input type="number" name="valorCustoCarro" required>
         </div>
         
         <div>
             <label>Valor de Venda:</label>
-            <input type="text" name="valorVendaCarro" required>
+            <input type="number" name="valorVendaCarro" required>
         </div>
         
         <div>
             <label>Cor:</label>
-            <input type="text" name="corCarro" required>
+            <select name="corCarro" required>
+                <option value="vermelho">Vermelho</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="preto">Preto</option>
+                <option value="branco">Branco</option>
+                <option value="cinza">Cinza</option>
+                <option value="prata">Prata</option>
+                <option value="roxo">Roxo</option>
+                <option value="amarelo">Amarelo</option>
+                <option value="laranja">Laranja</option>
+                <option value="marrom">Marrom</option>
+            </select>
         </div>
         
         <div>

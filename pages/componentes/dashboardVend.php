@@ -45,24 +45,52 @@ if (isset($_POST['vender']) && isset($_POST['idNegoc'])) {
     $idNegoc = $_POST['idNegoc'];
     $dataConclusao = date("Y-m-d");
     $valorVenda = $_POST['valorVenda'];
-    $queryVender = "UPDATE negociacao SET statusNegoc= 'vendido', valorVenda = $valorVenda ,
-                    dtaConclusao = '$dataConclusao'  WHERE idNegoc = '$idNegoc'";
 
-    if (mysqli_query($con, $queryVender)) {
-        echo "<script>
-        alert('Negociação marcada como vendida!');
-        window.location.href = window.location.pathname;
-        </script>";
+    // ✅ Busca o idCarro dessa negociação
+    $queryBuscaCarro = "SELECT idCarro FROM negociacao WHERE idNegoc = '$idNegoc'";
+    $result = mysqli_query($con, $queryBuscaCarro);
+
+    if ($linha = mysqli_fetch_assoc($result)) {
+        $idCarro = $linha['idCarro'];
+
+        // Marca como vendido
+        $queryVender = "UPDATE negociacao 
+                        JOIN carros ON negociacao.idCarro = carros.idCarro
+                        SET 
+                            negociacao.statusNegoc = 'vendido', 
+                            negociacao.valorVenda = $valorVenda,
+                            negociacao.dtaConclusao = '$dataConclusao',
+                            carros.statusCarro = 'vendido'
+                        WHERE negociacao.idNegoc = '$idNegoc'";
+
+        if (mysqli_query($con, $queryVender)) {
+
+            // ✅ Cancela outras negociações do mesmo carro
+            $queryCancelarOutras = "UPDATE negociacao 
+                                    SET statusNegoc = 'cancelado', 
+                                        dtaConclusao = '$dataConclusao'
+                                    WHERE idCarro = '$idCarro' 
+                                      AND idNegoc != '$idNegoc' 
+                                      AND statusNegoc = 'em andamento'";
+
+            mysqli_query($con, $queryCancelarOutras);
+
+            // Redireciona sem reenvio do formulário
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit;
+        } else {
+            echo "<p>Erro ao marcar como vendida: " . mysqli_error($con) . "</p>";
+        }
     } else {
-        echo "<p>Erro ao marcar como vendida: " . mysqli_error($con) . "</p>";
+        echo "<p>Erro ao buscar o carro da negociação.</p>";
     }
 }
 
 // ✅ TRATAMENTO DO BOTÃO CANCELAR
 if (isset($_POST['cancelar']) && isset($_POST['idNegoc'])) {
     $idNegoc = $_POST['idNegoc'];
-
-    $queryCancelar = "UPDATE negociacao SET statusNegoc = 'cancelado' WHERE idNegoc = '$idNegoc'";
+    $dataConclusao = date("Y-m-d");
+    $queryCancelar = "UPDATE negociacao SET statusNegoc = 'cancelado', dtaConclusao = '$dataConclusao' WHERE idNegoc = '$idNegoc'";
 
     if (mysqli_query($con, $queryCancelar)) {
         echo "<script>
@@ -193,7 +221,7 @@ if (isset($_POST['cancelar']) && isset($_POST['idNegoc'])) {
                 // echo "<td></td>";
                 echo "<td>
                         <form method='POST' class='btnVendido'>
-                        <input type='text' placeholder='Valor Vendido' name=valorVenda>
+                        <input type='number' placeholder='Valor Vendido' name=valorVenda>
                             <input type='hidden' name='idNegoc' value='{$negociacao['idNegoc']}'>
                             <input type='submit' name='vender' value='Vender'>
                         </form>
