@@ -3,6 +3,26 @@
     <button class="close-btn" onclick="fecharModal()">✖</button>
     <h2>Entre em Contato com o Vendedor</h2>
     <h3>Insira suas informações para que possamos designar o melhor vendedor para você!</h3>
+    <div class="infsCarroModal">
+      <?php echo "
+      
+      <div class=esqModal><img src=../images/carrosVenda/$carro[imgPrincipalCarro] alt= ></div>
+      <div class=dirModal>
+        <div class=tituloModal>
+            <p> <h1>$carro[modeloCarro] $carro[anoCarro] </h1> <h4>$carro[marcaCarro] </h4> </p>     
+        </div>
+        <div class=detalhesModal>
+            <p>$carro[motorCarro]</p>
+            <p>$carro[categoriaCarro]</p>
+            <p>$carro[kmCarro]km</p>
+            <p> R$"; echo number_format($carro['valorVendaCarro'], 2, ',', '.'). "</p>
+            <p>em até 128x</p>
+        </div>
+      </div>
+      
+      "; ?>  
+    </div>
+     
     <form action="acts/solicitacaoContato.act.php" method="POST" enctype="multipart/form-data">
 
       <input type="hidden" name="idCarro" value="<?php echo $carro['idCarro']; ?>">

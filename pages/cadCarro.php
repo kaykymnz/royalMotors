@@ -74,7 +74,7 @@
         
         <div>
             <label>Ano:</label>
-            <input type="number" name="anoCarro" required>
+            <input type="number" name="anoCarro" maxlength="14" required>
         </div>
         
         <div>
