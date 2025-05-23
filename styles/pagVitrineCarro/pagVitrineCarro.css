@@ -18,6 +18,8 @@
   height: 650px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .mainCarro .tituloCarro {
   border-left: solid 1px #030625;
@@ -45,7 +47,6 @@
 }
 .mainCarro .tituloCarro .tituloAno img {
   max-height: 150px;
-  margin-left: 230px;
 }
 .mainCarro .tituloCarro .infsCarro {
   font-size: 30px;
@@ -64,12 +65,15 @@
 
 .fotosSecundarias {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 100px;
 }
 .fotosSecundarias img {
-  width: 300px;
+  width: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .tituloContato {
@@ -102,4 +106,75 @@
 .tituloContato input:hover {
   background-color: rgb(35, 76, 110);
   box-shadow: 8px 9px 24px -7px rgba(0, 0, 0, 0.514);
+}
+
+.modal-img {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-img .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content img {
+  width: 1600px;
+  height: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.thumbnail-container img {
+  width: 100px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumbnail-container img.active {
+  border: 2px solid #47bb5a;
 }/*# sourceMappingURL=pagVitrineCarro.css.map */

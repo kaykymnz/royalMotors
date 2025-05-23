@@ -14,7 +14,7 @@
 }
 .footer__logo {
   font-size: 1.8rem;
-  color: #facc15;
+  color: #1b4b72;
   margin-bottom: 0.5rem;
 }
 .footer__description {
@@ -39,7 +39,7 @@
   text-decoration: none;
 }
 .footer__section ul li a:hover {
-  color: #facc15;
+  color: #1b4b72;
 }
 .footer__socials {
   display: flex;
@@ -50,7 +50,7 @@
   color: #ddd;
 }
 .footer__socials a:hover {
-  color: #facc15;
+  color: #1b4b72;
 }
 .footer__bottom {
   text-align: center;

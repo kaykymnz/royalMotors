@@ -136,20 +136,38 @@
                         $carros = mysqli_query($con, "Select * from `carros` ORDER BY `idCarro` DESC");
                                                     
                             while($carro=mysqli_fetch_array($carros)){
+                            
+                            $classeCarro = 'indefinido';
+                                if($carro['statusCarro']=='vendido'){
+                                    $classeStt = 'statusCarroV';
+                                }
+                                if($carro['statusCarro']=='disponivel'){
+                                    $classeStt = 'statusCarroD';
+
+                                }else{
+                                    // $carro['statusCarro'] = $classeStt;
+                                }
                                 
-                            echo "  
-                                
-                                    <div class=carroCard>
-                                            <p ><a href=pagVitrineCarro.php?cod=$carro[idCarro]><img src=../images/carrosVenda/$carro[imgPrincipalCarro]></a></p>
-                                            <p class=tituloCarro> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> $carro[marcaCarro] $carro[modeloCarro]</a></p>
-                                            <p class=anoCarro> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> $carro[anoCarro]</a></p>
-                                            <p class=valorCustoTxt> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> Custo: </a></p>
-                                            <p class=valorCusto > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorCustoCarro'], 2, ',', '.')."</a></p>
-                                            <p class=valorVendaTxt > <a href=pagVitrineCarro.php?cod=$carro[idCarro]> Venda:</a></p>
-                                            <p class=valorVenda> <a href=pagVitrineCarro.php?cod=$carro[idCarro]> R$ "; echo number_format($carro['valorVendaCarro'], 2, ',', '.')."</a></p>
-                                            
-                                    </div> 
-                            ";
+                           echo "
+                                    <div class='carroCard'>
+                                        <p class=$classeStt> {$carro['statusCarro']}</p>
+                                        <p><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'><img src='../images/carrosVenda/{$carro['imgPrincipalCarro']}'></a></p>
+                                        <p class='tituloCarro'><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'> {$carro['marcaCarro']} {$carro['modeloCarro']}</a></p>
+                                        <p class='anoCarro'><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'> {$carro['anoCarro']}</a></p>
+                                        <p class='valorCustoTxt'><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'> Custo: </a></p>
+                                        <p class='valorCusto'><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'> R$ ".number_format($carro['valorCustoCarro'], 2, ',', '.')."</a></p>
+                                        <p class='valorVendaTxt'><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'>Valor de Venda:</a></p>
+                                        <p class='valorVenda'><a href='pagVitrineCarro.php?cod={$carro['idCarro']}'> R$ ".number_format($carro['valorVendaCarro'], 2, ',', '.')."</a></p>
+
+                                        <div class='dropdown'>
+                                            <h1 class='dropdown-toggle' style='cursor:pointer;'>...</h1>
+                                            <div class='dropdown-content'>
+                                                <a href='editarCarro.php?cod={$carro['idCarro']}'>Editar</a>
+                                                <a href='excluirCarro.php?cod={$carro['idCarro']}'>Excluir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    ";
                         }
                             
                         ?>

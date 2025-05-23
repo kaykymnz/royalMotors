@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="../images/icons/iconPag.png">
+    <title>Apolo Veiculos |  Veículo</title>
 </head>
+
 <body>
     <?php 
         include("componentes/navbar.php");  
@@ -63,5 +65,81 @@
     <?php include('componentes/footer.php');
           include('componentes/formModal.php') ?>
 
+
+<div id="imgModal" class="modal-img">
+  <span class="close-modal">&times;</span>
+  <div class="modal-content">
+    <button class="nav-btn prev">&#10094;</button>
+    <img id="imgAtual" src="" alt="Imagem ampliada">
+    <button class="nav-btn next">&#10095;</button>
+  </div>
+  <div class="thumbnail-container" id="thumbnails"></div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const imagens = [
+        "<?php echo '../images/carrosVenda/' . $carro['imgPrincipalCarro']; ?>",
+        "<?php echo '../images/carrosVenda/' . $carro['imgCarro2']; ?>",
+        "<?php echo '../images/carrosVenda/' . $carro['imgCarro3']; ?>",
+        "<?php echo '../images/carrosVenda/' . $carro['imgCarro4']; ?>"
+    ];
+
+    const modal = document.getElementById("imgModal");
+    const imgAtual = document.getElementById("imgAtual");
+    const thumbnails = document.getElementById("thumbnails");
+    const closeModal = document.querySelector(".close-modal");
+    const btnPrev = document.querySelector(".prev");
+    const btnNext = document.querySelector(".next");
+
+    let indexAtual = 0;
+
+    // Cria miniaturas
+    imagens.forEach((src, index) => {
+        const thumb = document.createElement("img");
+        thumb.src = src;
+        thumb.dataset.index = index;
+        thumbnails.appendChild(thumb);
+
+        thumb.addEventListener("click", () => {
+            indexAtual = index;
+            atualizarImagem();
+        });
+    });
+
+    function atualizarImagem() {
+        imgAtual.src = imagens[indexAtual];
+        document.querySelectorAll("#thumbnails img").forEach((img, i) => {
+            img.classList.toggle("active", i === indexAtual);
+        });
+    }
+
+    // Abrir modal ao clicar em imagem do carro
+    document.querySelectorAll(".mainCarro img, .fotosSecundarias img").forEach(img => {
+        img.addEventListener("click", () => {
+            const srcClicada = img.src;
+            indexAtual = imagens.findIndex(src => srcClicada.includes(src.split('/').pop()));
+            if (indexAtual === -1) indexAtual = 0;
+            atualizarImagem();
+            modal.style.display = "flex";
+        });
+    });
+
+    // Navegação
+    btnPrev.addEventListener("click", () => {
+        indexAtual = (indexAtual - 1 + imagens.length) % imagens.length;
+        atualizarImagem();
+    });
+
+    btnNext.addEventListener("click", () => {
+        indexAtual = (indexAtual + 1) % imagens.length;
+        atualizarImagem();
+    });
+
+    // Fechar modal
+    closeModal.addEventListener("click", () => modal.style.display = "none");
+});
+</script>
 </body>
 </html>

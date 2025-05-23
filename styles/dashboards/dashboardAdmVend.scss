@@ -156,9 +156,28 @@
             padding: 20px;
             border-radius: 6px;
             width: 19%;
+            .statusCarroD{
+                text-transform: capitalize;
+                font-size: 22px;
+                margin-bottom: 5px;
+                color: #2f6d60;
+
+            }
+            .statusCarroV{
+                text-transform: capitalize;
+                font-size: 22px;
+                margin-bottom: 5px;
+                color: #616161;
+
+            }
+            h1{
+                    color: #005288;
+                    font-size: 40px;
+                }
             a{
                 color: rgb(0, 0, 0);
                 text-decoration: none;
+                
             }
             img{
                 width: 350px;
@@ -207,6 +226,57 @@
         
     }
 }
+
+//////Menu dropdown do cardcarro
+/// 
+/// 
+/// 
+/// 
+/// 
+/// 
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: end;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: 100%; /* Sobe o menu */
+    right: 0;
+    background-color: #fff;
+    min-width: 150px;
+    padding: 10px 0px;
+    // gap: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    margin: 10px 0;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+
 
 
 
@@ -257,9 +327,7 @@
     }
 }
 
-.tabelaNegociacoes thead {
-    // background-color: #f0f0f0;
-}
+
 
 .tabelaNegociacoes th,
 .tabelaNegociacoes td {
@@ -287,9 +355,4 @@
     input:hover{
         background-color: #297967;
     }
-}
-
-.tabelaNegociacoes tbody tr:nth-child(even) {
-    // background-color: #bebebe;
-    // color: black;
 }

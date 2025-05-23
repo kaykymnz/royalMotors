@@ -1,5 +1,4 @@
 .cadCarro {
-  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,14 +8,14 @@
   margin-bottom: 10px;
 }
 .cadCarro .formCadCarro {
-  gap: 120px;
+  gap: 150px;
   display: flex;
-  -moz-column-count: 2;
-       column-count: 2;
   margin: 20px;
-  background-color: rgb(163, 196, 194);
+  background-color: rgb(150, 182, 201);
   padding: 30px;
   border-radius: 5px;
+  height: 70vh;
+  box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.48);
 }
 .cadCarro .formCadCarro input[type=text] {
   height: 30px;
@@ -24,8 +23,20 @@
   transition: 0.3s;
   border: solid 2px rgba(41, 41, 41, 0.144);
   outline: none;
+  border-radius: 5px;
 }
 .cadCarro .formCadCarro input[type=text]:focus {
+  border-radius: 5px;
+  border: solid 2px black;
+}
+.cadCarro .formCadCarro input[type=number] {
+  height: 30px;
+  padding-left: 5px;
+  transition: 0.3s;
+  border: solid 2px rgba(41, 41, 41, 0.144);
+  outline: none;
+}
+.cadCarro .formCadCarro input[type=number]:focus {
   border-radius: 5px;
   border: solid 2px black;
 }
@@ -54,4 +65,19 @@
   border-radius: 10px;
   border: solid 2px black;
   outline: none;
+}
+.cadCarro .formCadCarro button[type=submit] {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(12, 60, 82);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.48);
+  margin-top: 20px;
+}
+.cadCarro .formCadCarro button[type=submit]:hover {
+  background-color: rgb(62, 101, 119);
 }/*# sourceMappingURL=cadCarro.css.map */

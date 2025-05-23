@@ -85,6 +85,15 @@
         border-radius: 5px;        
         cursor: pointer;
         height: 550px;
+
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-style: none;
+                text-decoration: none;
+                color: black;
+        }
         img{
             margin-top: -300px;
             transition: 0.5s;

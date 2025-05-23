@@ -21,5 +21,33 @@
     ?>
     <!-- <p><a href="acts/logoff.php">Sair</a></p>
     <p><a href="login.php">Login</a></p> -->
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Ativa o clique nos botões de "..."
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation(); // Impede o clique de propagar e fechar instantaneamente
+
+        // Fecha todos os dropdowns antes de abrir o clicado
+        document.querySelectorAll('.dropdown-content').forEach(menu => {
+          if (menu !== this.nextElementSibling) {
+            menu.style.display = 'none';
+          }
+        });
+
+        const dropdown = this.nextElementSibling;
+        // Alterna visibilidade
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Clicar fora do menu fecha todos os dropdowns
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.dropdown-content').forEach(menu => {
+        menu.style.display = 'none';
+      });
+    });
+  });
+</script>
 </body>
 </html>
