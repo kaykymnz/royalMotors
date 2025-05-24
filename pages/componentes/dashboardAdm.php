@@ -147,7 +147,7 @@
                                 }else{
                                     // $carro['statusCarro'] = $classeStt;
                                 }
-                                
+                            $editar = "indefinido";
                            echo "
                                     <div class='carroCard'>
                                         <p class=$classeStt> {$carro['statusCarro']}</p>
@@ -162,7 +162,8 @@
                                         <div class='dropdown'>
                                             <h1 class='dropdown-toggle' style='cursor:pointer;'>...</h1>
                                             <div class='dropdown-content'>
-                                                <a href='editarCarro.php?cod={$carro['idCarro']}'>Editar</a>
+                                                <a href=editarForm.php?cod=$carro[idCarro]&editar=editarCarro>Editar Carro</a>
+                                                <a href=editarForm.php?cod=$carro[idCarro]&editar=editarStatus>Editar Status</a>
                                                 <a href='excluirCarro.php?cod={$carro['idCarro']}'>Excluir</a>
                                             </div>
                                         </div>
