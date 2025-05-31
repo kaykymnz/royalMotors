@@ -22,11 +22,11 @@
                 
                 <div class="inputForm">
                 <p>CPF</p>
-                <input type="number" placeholder="Apenas Números" name="cpf" required>
+                <input type="number" placeholder="Apenas Números" name="cpf" required minlength="11" maxlength="11">
                 </div>
                 <div class="inputForm">
                 <p>Senha</p>
-                <input type="password" placeholder="Insira sua senha" name="senha" required>
+                <input type="password" placeholder="Insira sua senha" name="senha" required minlength="8">
                 </div>
                 <p>Caso tenha problemas com o Login, contate seu <strong>Administrador</strong>.</p>
                 <div class="inputForm">

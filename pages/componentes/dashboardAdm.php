@@ -16,42 +16,61 @@
 
 
 <?php
-        require('../db/connect.php');
+    require('../db/connect.php');
 
-        // ✅ Vendas da Semana
-        $sqlSemana = "SELECT COUNT(*) AS vendas_semana
+    // ✅ Vendas da Semana
+    $sqlSemana = "SELECT COUNT(*) AS vendas_semana
+                FROM negociacao
+                WHERE statusNegoc = 'vendido'
+                AND YEARWEEK(dtaConclusao, 1) = YEARWEEK(CURDATE(), 1)";
+    $resSemana = mysqli_fetch_assoc(mysqli_query($con, $sqlSemana));
+
+    // ✅ Vendas do Mês
+    $sqlMes = "SELECT COUNT(*) AS vendas_mes
+            FROM negociacao
+            WHERE statusNegoc = 'vendido'
+            AND MONTH(dtaConclusao) = MONTH(CURDATE())
+            AND YEAR(dtaConclusao) = YEAR(CURDATE())";
+    $resMes = mysqli_fetch_assoc(mysqli_query($con, $sqlMes));
+
+    // ✅ Vendas do Semestre
+    $sqlSemestre = "SELECT COUNT(*) AS vendas_semestre
                     FROM negociacao
                     WHERE statusNegoc = 'vendido'
-                    AND YEARWEEK(dtaConclusao, 1) = YEARWEEK(CURDATE(), 1)";
-        $resSemana = mysqli_fetch_assoc(mysqli_query($con, $sqlSemana));
+                    AND YEAR(dtaConclusao) = YEAR(CURDATE())
+                    AND (
+                        (MONTH(CURDATE()) <= 6 AND MONTH(dtaConclusao) BETWEEN 1 AND 6)
+                        OR
+                        (MONTH(CURDATE()) > 6 AND MONTH(dtaConclusao) BETWEEN 7 AND 12)
+                    )";
+    $resSemestre = mysqli_fetch_assoc(mysqli_query($con, $sqlSemestre));
 
-        // ✅ Vendas do Mês
-        $sqlMes = "SELECT COUNT(*) AS vendas_mes
-                FROM negociacao
-                WHERE statusNegoc = 'vendido'
-                AND MONTH(dtaConclusao) = MONTH(CURDATE())
-                AND YEAR(dtaConclusao) = YEAR(CURDATE())";
-        $resMes = mysqli_fetch_assoc(mysqli_query($con, $sqlMes));
+    // ✅ Vendas do Ano
+    $sqlAno = "SELECT COUNT(*) AS vendas_ano
+            FROM negociacao
+            WHERE statusNegoc = 'vendido'
+            AND YEAR(dtaConclusao) = YEAR(CURDATE())";
+    $resAno = mysqli_fetch_assoc(mysqli_query($con, $sqlAno));
 
-        // ✅ Vendas do Semestre
-        $sqlSemestre = "SELECT COUNT(*) AS vendas_semestre
-                        FROM negociacao
-                        WHERE statusNegoc = 'vendido'
-                        AND YEAR(dtaConclusao) = YEAR(CURDATE())
-                        AND (
-                            (MONTH(CURDATE()) <= 6 AND MONTH(dtaConclusao) BETWEEN 1 AND 6)
-                            OR
-                            (MONTH(CURDATE()) > 6 AND MONTH(dtaConclusao) BETWEEN 7 AND 12)
-                        )";
-        $resSemestre = mysqli_fetch_assoc(mysqli_query($con, $sqlSemestre));
+    // ✅ Carros mais vendidos
+    function carroMaisVendido($con, $periodoSQL) {
+        $sql = "SELECT c.marcaCarro, c.modeloCarro, COUNT(*) as total_vendidos
+                FROM negociacao n
+                JOIN carros c ON n.idCarro = c.idCarro
+                WHERE n.statusNegoc = 'vendido' AND $periodoSQL
+                GROUP BY c.marcaCarro, c.modeloCarro
+                ORDER BY total_vendidos DESC
+                LIMIT 1";
+        $res = mysqli_query($con, $sql);
+        return mysqli_fetch_assoc($res);
+    }
 
-        // ✅ Vendas do Ano
-        $sqlAno = "SELECT COUNT(*) AS vendas_ano
-                FROM negociacao
-                WHERE statusNegoc = 'vendido'
-                AND YEAR(dtaConclusao) = YEAR(CURDATE())";
-        $resAno = mysqli_fetch_assoc(mysqli_query($con, $sqlAno));
+    $maisSemana = carroMaisVendido($con, "YEARWEEK(n.dtaConclusao, 1) = YEARWEEK(CURDATE(), 1)");
+    $maisMes = carroMaisVendido($con, "MONTH(n.dtaConclusao) = MONTH(CURDATE()) AND YEAR(n.dtaConclusao) = YEAR(CURDATE())");
+    $maisSemestre = carroMaisVendido($con, "YEAR(n.dtaConclusao) = YEAR(CURDATE()) AND ((MONTH(CURDATE()) <= 6 AND MONTH(n.dtaConclusao) BETWEEN 1 AND 6) OR (MONTH(CURDATE()) > 6 AND MONTH(n.dtaConclusao) BETWEEN 7 AND 12))");
+    $maisAno = carroMaisVendido($con, "YEAR(n.dtaConclusao) = YEAR(CURDATE())");
 ?>
+
 
 
 
@@ -59,7 +78,7 @@
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'dashboard')">Dashboard</button>
             <button class="tab-button" onclick="openTab(event, 'carros')"> Carros </button>
-            <button class="tab-button" onclick="openTab(event, 'comercial')"> Comercial </button>
+            <!-- <button class="tab-button" onclick="openTab(event, 'comercial')"> Comercial </button> -->
         </div>
         <div id="dashboard" class="tab-content show">
             <div class="conteudo">
@@ -68,47 +87,45 @@
 
 
 
-                <div class="vendas">
-                    <div class="abaEsqVendas">
-                        <div>
-                                <p>Vendas nesta Semana</p>
-                                <h2><?php echo $resSemana['vendas_semana']; ?></h2>
-                            </div>
-                            <div>
-                                <p>Vendas neste Mês</p>
-                                <h2><?php echo $resMes['vendas_mes']; ?></h2>
-                            </div>
-                            <div>
-                                <p>Vendas neste Semestre</p>
-                                <h2><?php echo $resSemestre['vendas_semestre']; ?></h2>
-                            </div>
-                            <div>
-                                <p>Vendas neste Ano</p>
-                                <h2><?php echo $resAno['vendas_ano']; ?></h2>
-                            </div>
+            <div class="vendas">
+                <div class="abaEsqVendas">
+                    <div>
+                        <p>Vendas nesta Semana</p>
+                        <h2><?php echo $resSemana['vendas_semana']; ?></h2>
                     </div>
-                    <div class="linhaVendas">
-
+                    <div>
+                        <p>Vendas neste Mês</p>
+                        <h2><?php echo $resMes['vendas_mes']; ?></h2>
                     </div>
-                    <div class="abaDirVendas">
-                         <div>
-                            <p>Carro mais vendido nesta Semana</p>
-                            <div>Fiat Grand Siena <p>4 Vendidos</p></div>
-                        </div>
-                        <div>
-                            <p>Carro mais vendido neste Mês</p>
-                            <div>Fiat Argo <p>20 Vendidos</p></div>
-                        </div>
-                        <div>
-                            <p>Carro mais vendido neste Semestre</p>
-                            <div>Mitsubishi Lancer <p>40 Vendidos</p></div>
-                        </div>
-                        <div>
-                            <p>Carro mais vendido neste Ano</p>
-                            <div>Mitsubishi Lancer <p>47 Vendidos</p></div>
-                        </div>
+                    <div>
+                        <p>Vendas neste Semestre</p>
+                        <h2><?php echo $resSemestre['vendas_semestre']; ?></h2>
+                    </div>
+                    <div>
+                        <p>Vendas neste Ano</p>
+                        <h2><?php echo $resAno['vendas_ano']; ?></h2>
                     </div>
                 </div>
+                <div class="linhaVendas"></div>
+                <div class="abaDirVendas">
+                    <div>
+                        <p>Carro mais vendido nesta Semana</p>
+                        <div><?php echo $maisSemana ? $maisSemana['marcaCarro'] . ' ' . $maisSemana['modeloCarro'] . '<p>' . $maisSemana['total_vendidos'] . ' Vendidos</p>' : '<p>Sem vendas</p>'; ?></div>
+                    </div>
+                    <div>
+                        <p>Carro mais vendido neste Mês</p>
+                        <div><?php echo $maisMes ? $maisMes['marcaCarro'] . ' ' . $maisMes['modeloCarro'] . '<p>' . $maisMes['total_vendidos'] . ' Vendidos</p>' : '<p>Sem vendas</p>'; ?></div>
+                    </div>
+                    <div>
+                        <p>Carro mais vendido neste Semestre</p>
+                        <div><?php echo $maisSemestre ? $maisSemestre['marcaCarro'] . ' ' . $maisSemestre['modeloCarro'] . '<p>' . $maisSemestre['total_vendidos'] . ' Vendidos</p>' : '<p>Sem vendas</p>'; ?></div>
+                    </div>
+                    <div>
+                        <p>Carro mais vendido neste Ano</p>
+                        <div><?php echo $maisAno ? $maisAno['marcaCarro'] . ' ' . $maisAno['modeloCarro'] . '<p>' . $maisAno['total_vendidos'] . ' Vendidos</p>' : '<p>Sem vendas</p>'; ?></div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -179,11 +196,11 @@
 
 
 
-        <div id="comercial" class="tab-content">
+        <!-- <div id="comercial" class="tab-content">
             <div class="conteudo">
                 <h2>Comercial</h2>
             </div>
-        </div>
+        </div> -->
 
 
 

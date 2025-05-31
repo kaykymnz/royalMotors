@@ -2,7 +2,7 @@
     <div class="destaqueTxt">Destaques</div>
     <div class="destaquesCarros">
         <div class="destaque">
-        <a href="pagVitrineCarro.php?cod=120">
+        <a href="pagVitrineCarro.php?cod=129">
             <img src="../images/sonic.png" alt="">
             <p>Chevrolet Sonic</p>
             <p>R$ 54.000,00</p>
